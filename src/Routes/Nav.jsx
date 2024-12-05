@@ -14,7 +14,7 @@ const IconNameNavbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-opacity-30 backdrop-blur-md bg-[#112240] shadow-lg">
+    <nav className=" fixed top-0 left-0 right-0 z-50 bg-opacity-30 backdrop-blur-md bg [#0a192f] shadow-lg">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">

@@ -107,4 +107,69 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+
+  /* {Logos Marquee} */
+  
+  :root {
+    --bg-clr: transparent;
+    --logo-height: 100px; /* Adjust logo height */
+    --animation-duration: 10s; /* Duration for one direction */
+    --logo-gap: 80px;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--bg-clr);
+  }
+  
+  .carousel-wrapper {
+    width: 80%; /* Full width */
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-clr);
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    animation: scroll-ltr var(--animation-duration) linear infinite;
+    gap: var(--logo-gap);
+    /* Alternating animation */
+  }
+  
+  .carousel:nth-child(2n) {
+    animation: scroll-rtl var(--animation-duration) linear infinite;
+  }
+  
+  .item {
+    flex: 0 0 auto; /* Prevent items from stretching */
+  }
+  
+  .item > img {
+    height: var(--logo-height); /* Consistent height for all logos */
+    object-fit: contain;
+  }
+  
+  /* Keyframes for left-to-right scrolling */
+  @keyframes scroll-ltr {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Keyframes for right-to-left scrolling */
+  @keyframes scroll-rtl {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
   

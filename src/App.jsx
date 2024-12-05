@@ -22,7 +22,7 @@ function App() {
         <Route path="/calendar" element={<CalendarPage />} />
       </Routes>
        
-      <Cards />
+ 
        <Footer/>
       
     </Router>
@@ -36,23 +36,7 @@ import { useEffect, useState, useRef } from 'react';
 
 
 const HomePage = () => {
-  const FEATURED_PROJECTS = [
-    {
-      id: 1,
-      title: 'Project 1',
-      description: 'Description of Project 1.',
-      icon: 'https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      gradient: 'from-teal-400 to-blue-500',
-    },
-    {
-      id: 2,
-      title: 'Project 2',
-      description: 'Description of Project 2.',
-      icon: 'https://example.com/icon2.svg',
-      gradient: 'from-purple-600 to-pink-500',
-    },
-    // Add more projects as needed
-  ];
+  
 
   const [visibleProjects, setVisibleProjects] = useState(new Set());
   const projectRefs = useRef([]);
@@ -106,42 +90,74 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Featured Projects Section */}
-      <div className="container mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-center mb-12 gradient-text">
-          Our Breakthrough Projects
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {FEATURED_PROJECTS.map((project, index) => (
-            <div
-              key={project.id}
-              ref={(el) => (projectRefs.current[index] = el)}
-              className={`p-6 rounded-2xl bg-gradient-to-br ${project.gradient} transform transition-all duration-700 ${
-                visibleProjects.has(projectRefs.current[index])
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
-              } shadow-2xl`}
-            >
-              <img
-                src={project.icon}
-                alt={project.title}
-                className="mb-4 text-white"
-                style={{ width: '36px', height: '36px' }}
-              />
-              <h3 className="text-xl font-semibold mb-3 text-white">
-                {project.title}
-              </h3>
-              <p className="text-white/80 mb-4">{project.description}</p>
-              <a
-                href="#"
-                className="flex items-center text-white hover:text-white/80"
-              >
-                Learn More <ArrowRight className="ml-2" size={18} />
-              </a>
-            </div>
-          ))}
+      
+      <Cards />
+
+      <div className="carousel-wrapper mx-auto mt-12">
+        <div className="carousel">
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/apple.com"
+              alt="Apple"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/google.com"
+              alt="Google"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/amazon.com"
+              alt="Amazon"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/microsoft.com"
+              alt="Microsoft"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/facebook.com"
+              alt="Facebook"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/netflix.com"
+              alt="Netflix"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/tesla.com"
+              alt="Tesla"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/nike.com"
+              alt="Nike"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/adidas.com"
+              alt="Adidas"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://logo.clearbit.com/coca-cola.com"
+              alt="Coca-Cola"
+            />
+          </div>
         </div>
       </div>
+      
     </div>
   );
 };
@@ -156,30 +172,3 @@ const CalendarPage = () => <div>Calendar Page</div>;
 
 
 
-// // Projects and Social Links for reference
-// const FEATURED_PROJECTS = [
-//   {
-//     id: 1,
-//     title: 'Innovative Robotics',
-//     description: 'Cutting-edge robotic solutions for industrial automation',
-//     icon: Zap,
-//     gradient: 'from-blue-600 to-purple-700',
-//   },
-//   {
-//     id: 2,
-//     title: 'AI Research Nexus',
-//     description: 'Breakthrough artificial intelligence applications',
-//     icon: Lightbulb,
-//     gradient: 'from-green-600 to-teal-700',
-//   },
-//   {
-//     id: 3,
-//     title: 'Sustainable Tech',
-//     description: 'Eco-friendly technological innovations',
-//     icon: Award,
-//     gradient: 'from-yellow-600 to-orange-700',
-//   },
-// ];
-
-
-// export default RICWebsite;
