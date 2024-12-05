@@ -84,7 +84,7 @@ const HomePage = () => {
 
         <div className="md:w-1/2 h-[500px] md:h-[600px] absolute right-0 top-1/2 transform -translate-y-1/2">
           <Spline
-            scene="https://prod.spline.design/DjL6R785oPYTASzy/scene.splinecode"
+            scene="https://prod.spline.design/7z-xgqEIvhCOPl1E/scene.splinecode"
             className="w-full h-full"
           />
         </div>
