@@ -1,0 +1,110 @@
+/* Only styles for the card container */
+.cards-container {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: blue; /* Background specific to the container */
+  }
+  
+  /* Styles for each card wrapper */
+  .card-wrap {
+    flex: 0 1 calc(25% - 40px); /* Adjusts card size to 4 per row, with spacing */
+    max-width: calc(25% - 40px); /* Prevents cards from exceeding their space */
+    margin: 20px; /* Optional: Adds consistent spacing around each card */
+    perspective: 800px;
+    cursor: pointer;
+  }
+  
+  /* Styles for the card */
+  .card {
+    position: relative;
+    width: 240px;
+    height: 320px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+      inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  }
+  
+  /* Background for each card */
+  .card-bg {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      opacity 5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+  /* Card content information */
+  .card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    color: #fff;
+    transform: translateY(40%);
+    transition: transform 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .card-info h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  }
+  
+  .card-info p {
+    opacity: 0;
+    line-height: 1.5;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px;
+    transition: opacity 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  /* Hover effects */
+  .card:hover .card-info {
+    transform: translateY(0);
+  }
+  
+  .card:hover .card-info p {
+    opacity: 1;
+  }
+  
+  .card:hover {
+    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
+      rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+      inset white 0 0 0 6px;
+  }
+  
+  /* Cards.css or HomePage.css */
+.line-animation {
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #00f260, #0575e6);
+    transition: width 0.8s ease-in-out;
+  }
+  
+  .line-animation.animate {
+    width: 100%;
+  }
+
+  .project-card {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .project-card.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
