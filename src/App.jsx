@@ -5,7 +5,7 @@ import { IconNameNavbar } from './Routes/Nav';
 import { ArrowRight } from 'react-feather'; // Assuming you're using `react-feather` for icons
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
-
+import { GalleryPage } from './Routes/Gallery';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
        
  

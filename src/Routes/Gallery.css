@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1e3a8a, #2c5282);
+  color: #FFD700; /* Golden Yellow */
+  padding-top: 50px; /* Reduced gap from the navbar */
+  overflow: auto;
+}
+
+.gallery-container {
+  text-align: center;
+  padding: 2rem 1rem; /* Reduced padding */
+}
+
+.gallery-title {
+  font-size: 2.5rem; /* Reduced font size */
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem; /* Reduced gap */
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-columns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Reduced gap between columns */
+  margin-top: 1rem; /* Reduced gap */
+}
+
+.year-column {
+  width: 28%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 1rem;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.year-column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3);
+}
+
+.year-heading {
+  font-size: 2rem; /* Reduced font size */
+  color: #FFD700; /* Golden Yellow */
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px #FFD700;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative; /* Ensuring buttons overlay the image */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover {
+  filter: brightness(1.2); /* Slight brightness increase on hover */
+}
+
+.gallery-nav-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px; /* Reduced button size */
+  height: 35px; /* Reduced button size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.gallery-nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.top-nav {
+  top: 13%; /* Corrected position: Now it will be on top of the image (below the year) */
+}
+
+.bottom-nav {
+  bottom: 1px; /* Adjusted for more space */
+  pointer-events: auto; /* Ensure it does not block scrolling */
+}
