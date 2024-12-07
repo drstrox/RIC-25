@@ -68,10 +68,10 @@ body {
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Ensures the entire image is visible */
+  background-color: black; /* Optional: Adds a background to fill blank areas */
   transition: opacity 0.3s ease;
 }
-
 .image-container:hover {
   filter: brightness(1.2); /* Slight brightness increase on hover */
 }

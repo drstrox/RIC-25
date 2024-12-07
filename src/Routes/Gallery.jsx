@@ -78,14 +78,27 @@ const YearGallery = ({ images, year }) => {
 export const GalleryPage = () => {
   const years = {
     2024: [
-      "https://picsum.photos/300/300?random=1", 
-      "https://picsum.photos/300/300?random=2",
-      "https://picsum.photos/300/300?random=7"
+      "/images/2024-1.JPG", 
+      "/images/2024-2.JPG",
+      "/images/2024-3.JPG",
+      "/images/2024-4.JPG", 
+      "/images/2024-5.JPG",
+      "/images/2024-6.JPG", 
+      "/images/2024-7.JPG",
+      "/images/2024-8.JPG", 
+      "/images/2024-9.JPG",
+      "/images/2024-10.JPG"
     ],
     2023: [
-      "https://picsum.photos/300/300?random=3", 
-      "https://picsum.photos/300/300?random=4",
-      "https://picsum.photos/300/300?random=8"
+      "/images/2023-1.png", 
+      "/images/2023-2.png",
+      "/images/2023-3.png",
+      "/images/2023-4.png", 
+      "/images/2023-5.png",
+      "/images/2023-6.png", 
+      "/images/2023-7.png",
+      "/images/2023-8.png",
+      "/images/2023-9.png"
     ],
     2022: [
       "https://picsum.photos/300/300?random=5", 
