@@ -1,175 +1,273 @@
 /* Only styles for the card container */
 .cards-container {
-    padding: 40px 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
-    align-items: center;
-    min-height: 100vh;
-    background-color: blue; /* Background specific to the container */
-  }
-  
-  /* Styles for each card wrapper */
-  .card-wrap {
-    flex: 0 1 calc(25% - 40px); /* Adjusts card size to 4 per row, with spacing */
-    max-width: calc(25% - 40px); /* Prevents cards from exceeding their space */
-    margin: 20px; /* Optional: Adds consistent spacing around each card */
-    perspective: 800px;
-    cursor: pointer;
-  }
-  
-  /* Styles for the card */
-  .card {
-    position: relative;
-    width: 240px;
-    height: 320px;
-    background-color: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
-      inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
-  }
-  
-  /* Background for each card */
-  .card-bg {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-      opacity 5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  }
-  
-  /* Card content information */
-  .card-info {
-    position: absolute;
-    bottom: 0;
-    padding: 20px;
-    color: #fff;
-    transform: translateY(40%);
-    transition: transform 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  
-  .card-info h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 36px;
-    font-weight: 700;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
-  }
-  
-  .card-info p {
-    opacity: 0;
-    line-height: 1.5;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px;
-    transition: opacity 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  
-  /* Hover effects */
-  .card:hover .card-info {
-    transform: translateY(0);
-  }
-  
-  .card:hover .card-info p {
-    opacity: 1;
-  }
-  
-  .card:hover {
-    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
-      rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
-      inset white 0 0 0 6px;
-  }
-  
-  /* Cards.css or HomePage.css */
+  padding: 40px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  min-height: 100vh;
+  background-color: blue; /* Background specific to the container */
+}
+
+/* Styles for each card wrapper */
+.card-wrap {
+  flex: 0 1 calc(25% - 40px); /* Adjusts card size to 4 per row, with spacing */
+  max-width: calc(25% - 40px); /* Prevents cards from exceeding their space */
+  margin: 20px; /* Optional: Adds consistent spacing around each card */
+  perspective: 800px;
+  cursor: pointer;
+}
+
+/* Styles for the card */
+.card {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+}
+
+/* Background for each card */
+.card-bg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/* Card content information */
+.card-info {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  color: #fff;
+  transform: translateY(40%);
+  transition: transform 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card-info h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+}
+
+.card-info p {
+  opacity: 0;
+  line-height: 1.5;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px;
+  transition: opacity 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Hover effects */
+.card:hover .card-info {
+  transform: translateY(0);
+}
+
+.card:hover .card-info p {
+  opacity: 1;
+}
+
+.card:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+    inset white 0 0 0 6px;
+}
+
+/* Cards.css or HomePage.css */
 .line-animation {
-    width: 0;
-    height: 4px;
-    background: linear-gradient(to right, #00f260, #0575e6);
-    transition: width 0.8s ease-in-out;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to right, #00f260, #0575e6);
+  transition: width 0.8s ease-in-out;
+}
+
+.line-animation.animate {
+  width: 100%;
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.project-card.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1200px (tablets and smaller laptops) */
+@media (max-width: 1199px) {
+  .card-wrap {
+    flex: 0 1 calc(33.33% - 40px); /* 3 cards per row */
+    max-width: calc(33.33% - 40px);
   }
-  
-  .line-animation.animate {
-    width: 100%;
+  .card {
+    width: 220px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrap {
+    flex: 0 1 calc(33.33% - 20px); /* 3 cards per row */
+    max-width: calc(33.33% - 20px);
+  }
+  .card {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 568px) {
+  .cards-container {
+    display: flex;
+    justify-content: center; /* Center all cards within the container */
+    align-items: center; /* Vertically center the cards */
+    min-height: 100vh; /* Ensure full viewport height */
   }
 
-  .project-card {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+  .card-wrap {
+    flex: 0 1 auto; /* Adjust to only show one card */
+    max-width: 100%; /* Ensure no other cards are displayed */
+    margin: 0; /* Remove extra margin */
   }
-  
-  .project-card.animate {
-    opacity: 1;
-    transform: translateX(0);
+
+  .card {
+    width: 220px;
+    height: 320px;
   }
+}
+
+
+/* For screens smaller than 768px (mobile devices) */
 
 
   /* {Logos Marquee} */
   
   :root {
     --bg-clr: transparent;
-    --logo-height: 100px; /* Adjust logo height */
-    --animation-duration: 10s; /* Duration for one direction */
-    --logo-gap: 80px;
-  }
-  
-  body {
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background-color: var(--bg-clr);
-  }
-  
-  .carousel-wrapper {
-    width: 80%; /* Full width */
+    --logo-height-desktop: 100px;
+    --logo-height-tablet: 70px;
+    --logo-height-mobile: 50px;
+    --animation-duration-desktop: 15s;
+    --animation-duration-tablet: 12s;
+    --animation-duration-mobile: 8s;
+    --logo-gap-desktop: 80px;
+    --logo-gap-tablet: 60px;
+    --logo-gap-mobile: 40px;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1400px;
     overflow: hidden;
     position: relative;
     background-color: var(--bg-clr);
-  }
-  
-  .carousel {
+    margin: 0 auto;
+}
+
+.carousel {
     display: flex;
     align-items: center;
-    animation: scroll-ltr var(--animation-duration) linear infinite;
-    gap: var(--logo-gap);
-    /* Alternating animation */
-  }
-  
-  .carousel:nth-child(2n) {
-    animation: scroll-rtl var(--animation-duration) linear infinite;
-  }
-  
-  .item {
-    flex: 0 0 auto; /* Prevent items from stretching */
-  }
-  
-  .item > img {
-    height: var(--logo-height); /* Consistent height for all logos */
+    animation: scroll-ltr var(--animation-duration-desktop) linear infinite;
+    gap: var(--logo-gap-desktop);
+    width: max-content;
+}
+
+.carousel:nth-child(2n) {
+    animation: scroll-rtl var(--animation-duration-desktop) linear infinite;
+}
+
+.item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.item > img {
+    height: var(--logo-height-desktop);
+    max-width: 150px;
     object-fit: contain;
-  }
-  
-  /* Keyframes for left-to-right scrolling */
-  @keyframes scroll-ltr {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.item > img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll-ltr {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     100% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
-  }
-  
-  /* Keyframes for right-to-left scrolling */
-  @keyframes scroll-rtl {
+}
+
+@keyframes scroll-rtl {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .carousel {
+        animation-duration: var(--animation-duration-tablet);
+        gap: var(--logo-gap-tablet);
+    }
+
+    .item > img {
+        height: var(--logo-height-tablet);
+        max-width: 120px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .carousel {
+        animation-duration: var(--animation-duration-mobile);
+        gap: var(--logo-gap-mobile);
+    }
+
+    .item > img {
+        height: var(--logo-height-mobile);
+        max-width: 80px;
+    }
+}
+
+/* Accessibility and Performance */
+@media (prefers-reduced-motion: reduce) {
+    .carousel {
+        animation: none;
+        overflow-x: auto;
+    }
+}
+
+.carousel:hover {
+    animation-play-state: paused;
+}

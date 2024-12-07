@@ -36,9 +36,10 @@ export default App;
 import { useEffect, useState, useRef } from 'react';
 
 
-const HomePage = () => {
-  
 
+
+
+const HomePage = () => {
   const [visibleProjects, setVisibleProjects] = useState(new Set());
   const projectRefs = useRef([]);
 
@@ -47,7 +48,7 @@ const HomePage = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleProjects((prev) => new Set(prev).add(entry.target));
+            setVisibleProjects((prev) => new Set([...prev, entry.target.dataset.id]));
           }
         });
       },
@@ -64,101 +65,99 @@ const HomePage = () => {
   return (
     <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <div className="container mx-auto px-6 pt-24 md:flex items-center min-h-screen relative">
-        <div className="md:w-1/2 space-y-6 z-10 relative">
-          <h1 className="text-5xl md:text-6xl font-bold gradient-text">
-            Research & Industrial Conclave
-          </h1>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Pioneering interdisciplinary research and bridging the gap between academic innovation and industrial implementation at IIT Indore.
-          </p>
-          <div className="flex space-x-4">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full hover:scale-105 transform transition">
-              Explore Research
-            </button>
-            <button className="px-6 py-3 border border-blue-300 text-blue-300 rounded-full hover:bg-blue-300 hover:text-[#0a192f] transition">
-              Join Our Network
-            </button>
-          </div>
-        </div>
-
-
-        <div className="md:w-1/2 h-[500px] md:h-[600px] absolute right-0 top-1/2 transform -translate-y-1/2">
+      <div className="relative bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-hidden">
+        {/* Full-Screen Spline Background */}
+        <div className="absolute inset-0 z-0">
           <Spline
             scene="https://prod.spline.design/7z-xgqEIvhCOPl1E/scene.splinecode"
-            className="w-full h-full"
+            className="w-full h-full "
           />
         </div>
-      </div>
 
-      
-      <Cards />
+        {/* Hero Section with Animated Text */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 flex items-center min-h-screen">
+          <div className="max-w-full md:max-w-xl lg:w-1/2 space-y-4 sm:space-y-6">
+            {/* Responsive Text Sizing */}
+            <div className="overflow-hidden">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text animate-line-draw">
+                Research 
+              </h1>
+            </div>
+            <div className="overflow-hidden">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text animate-line-draw">
+                &amp;
+              </h1>
+            </div>
+            <div className="overflow-hidden">
+              <h1 className="text-4xl sm:text-5xl md:text-5.5xl font-bold gradient-text animate-line-draw">
+                Industrial Conclave
+              </h1>
+            </div>
 
-      <div className="carousel-wrapper mx-auto mt-12">
-        <div className="carousel">
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/apple.com"
-              alt="Apple"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/google.com"
-              alt="Google"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/amazon.com"
-              alt="Amazon"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/microsoft.com"
-              alt="Microsoft"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/facebook.com"
-              alt="Facebook"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/netflix.com"
-              alt="Netflix"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/tesla.com"
-              alt="Tesla"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/nike.com"
-              alt="Nike"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/adidas.com"
-              alt="Adidas"
-            />
-          </div>
-          <div className="item">
-            <img
-              src="https://logo.clearbit.com/coca-cola.com"
-              alt="Coca-Cola"
-            />
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed mt-4 sm:mt-6">
+              Pioneering interdisciplinary research and bridging the gap between
+              academic innovation and industrial implementation at IIT Indore.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+              <button className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full hover:scale-105 transform transition">
+                Explore Research
+              </button>
+              <button className="w-full sm:w-auto px-6 py-3 border border-blue-300 text-blue-300 rounded-full hover:bg-blue-300 hover:text-[#0a192f] transition mt-3 sm:mt-0">
+                Join Our Network
+              </button>
+            </div>
           </div>
         </div>
+
+        {/* Mobile Background Overlay */}
+        <div className="absolute inset-0 bg-black/40 md:hidden z-5"></div>
       </div>
-      
+
+      {/* Cards Section */}
+      <Cards />
+
+      {/* Company Logos Carousel */}
+      <div className="carousel-wrapper mx-auto mt-12">
+        <div className="carousel">
+          {["apple", "google", "amazon", "microsoft", "facebook", "netflix", "tesla", "nike", "adidas", "coca-cola"].map((company, idx) => (
+            <div className="item" key={company}>
+              <img
+                src={`https://logo.clearbit.com/${company}.com`}
+                alt={`${company.charAt(0).toUpperCase() + company.slice(1)} logo - Partner`}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        .animate-line-draw {
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          display: inline-block;
+          animation: line-draw 2s forwards;
+        }
+
+        @keyframes line-draw {
+          from {
+            clip-path: inset(0 100% 0 0);
+          }
+          to {
+            clip-path: inset(0 0 0 0);
+          }
+        }
+
+        /* Fallback for browsers that don't support clip-path */
+        @supports not (clip-path: inset(0 0 0 0)) {
+          .animate-line-draw {
+            visibility: visible;
+          }
+        }
+      `}</style>
     </div>
   );
 };

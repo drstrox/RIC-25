@@ -54,6 +54,7 @@ const Card = ({ dataImage, header, content }) => {
     </div>
   );
 };
+
 const Cards = () => {
   const cardData = [
     {
@@ -108,4 +109,4 @@ const Cards = () => {
   );
 };
 
-export {Cards};
+export { Cards };
