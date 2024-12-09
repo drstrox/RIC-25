@@ -106,3 +106,30 @@ body {
   bottom: 1px; /* Adjusted for more space */
   pointer-events: auto; /* Ensure it does not block scrolling */
 }
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .gallery-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Increase gap for better spacing in vertical layout */
+  }
+
+  .year-column {
+    width: 90%; /* Make columns take most of the screen width */
+    height: auto; /* Adjust height for a better fit */
+  }
+
+  .year-heading {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .image-container {
+    height: 300px; /* Reduce image height */
+  }
+
+  .gallery-nav-button {
+    width: 30px;
+    height: 30px;
+  }
+}
