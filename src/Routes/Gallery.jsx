@@ -99,11 +99,6 @@ export const GalleryPage = () => {
       "/images/2023-7.png",
       "/images/2023-8.png",
       "/images/2023-9.png"
-    ],
-    2022: [
-      "https://picsum.photos/300/300?random=5", 
-      "https://picsum.photos/300/300?random=6",
-      "https://picsum.photos/300/300?random=9"
     ]
   };
 
@@ -113,7 +108,6 @@ export const GalleryPage = () => {
       <div className="gallery-columns">
         <YearGallery images={years[2024]} year="2024" />
         <YearGallery images={years[2023]} year="2023" />
-        <YearGallery images={years[2022]} year="2022" />
       </div>
     </div>
   );

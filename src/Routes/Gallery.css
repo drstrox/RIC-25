@@ -24,19 +24,19 @@ body {
 
 .gallery-columns {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem; /* Reduced gap between columns */
-  margin-top: 1rem; /* Reduced gap */
+  justify-content: space-between; /* Spread columns evenly */
+  gap: 2rem; /* Add space between the two columns */
+  margin: 0 2%; /* Add small margins on the left and right sides */
 }
 
 .year-column {
-  width: 28%;
+  width: 46%; /* Make columns wider */
   height: 500px;
   overflow: hidden;
-  margin: 0 1rem;
+  margin: 0; /* Remove side margins for even spacing */
   position: relative;
   border-radius: 15px;
-  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -72,6 +72,7 @@ body {
   background-color: black; /* Optional: Adds a background to fill blank areas */
   transition: opacity 0.3s ease;
 }
+
 .image-container:hover {
   filter: brightness(1.2); /* Slight brightness increase on hover */
 }
@@ -113,6 +114,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem; /* Increase gap for better spacing in vertical layout */
+    margin: 0; /* Remove side margins for better fit */
   }
 
   .year-column {
