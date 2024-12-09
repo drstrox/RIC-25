@@ -100,13 +100,56 @@ const HomePage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-              <button className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-700 rounded-full hover:scale-105 transform transition">
-                Explore Research
-              </button>
-              <button className="w-full sm:w-auto px-6 py-3 border border-blue-300 text-blue-300 rounded-full hover:bg-blue-300 hover:text-[#0a192f] transition mt-3 sm:mt-0">
-                Join Our Network
-              </button>
-            </div>
+  <button className="
+    w-full sm:w-auto 
+    px-6 py-3 
+    bg-opacity-30 backdrop-blur-md bg-[#0a192f] shadow-lg
+    rounded-full 
+    text-white 
+    relative 
+    overflow-hidden 
+    transform transition-all duration-300 
+    hover:scale-[1.02]
+    active:translate-y-1
+    shadow-xl
+    hover:shadow-2xl
+    before:absolute 
+    before:inset-0 
+    before:bg-white 
+    before:opacity-0 
+    before:transition-opacity 
+    hover:before:opacity-10
+    3d-button
+
+  ">
+    <span className="relative z-10">Explore Research</span>
+  </button>
+  
+  <button className="
+    w-full sm:w-auto 
+    px-6 py-3 
+    border border-blue-300 
+    text-blue-300 
+    rounded-full 
+    relative 
+    overflow-hidden 
+    transform transition-all duration-300 
+    hover:scale-[1.02]
+    active:translate-y-1
+    shadow-xl
+    hover:shadow-2xl
+    before:absolute 
+    before:inset-0 
+    before:bg-white 
+    before:opacity-0 
+    before:transition-opacity 
+    hover:before:opacity-10
+    threed-button
+  ">
+    <span className="relative z-10">Join Our Network</span>
+  </button>
+</div>
+
           </div>
         </div>
 
