@@ -54,7 +54,7 @@
   padding: 20px;
   color: #fff;
   transform: translateY(40%);
-  transition: transform 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.6s 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .card-info h1 {
@@ -68,7 +68,7 @@
   opacity: 0;
   line-height: 1.5;
   text-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px;
-  transition: opacity 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 0.6s 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /* Hover effects */
