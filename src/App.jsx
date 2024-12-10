@@ -36,10 +36,6 @@ export default App;
 // HomePage Component
 import { useEffect, useState, useRef } from 'react';
 
-
-
-
-
 const HomePage = () => {
   const [visibleProjects, setVisibleProjects] = useState(new Set());
   const projectRefs = useRef([]);
