@@ -37,6 +37,7 @@ body {
   position: relative;
   border-radius: 15px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  scroll-behavior: smooth; /* Smooth scrolling */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -62,19 +63,19 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: relative; /* Ensuring buttons overlay the image */
+  position: relative;
 }
 
-.image-container img {
+.gallery-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensures the entire image is visible */
-  background-color: black; /* Optional: Adds a background to fill blank areas */
-  transition: opacity 0.3s ease;
+  object-fit: contain;
+  background-color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.image-container:hover {
-  filter: brightness(1.2); /* Slight brightness increase on hover */
+.gallery-image:hover {
+  transform: scale(1.05); /* Smooth zoom effect on hover */
 }
 
 .gallery-nav-button {
@@ -85,8 +86,8 @@ body {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 35px; /* Reduced button size */
-  height: 35px; /* Reduced button size */
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,12 +101,11 @@ body {
 }
 
 .top-nav {
-  top: 13%; /* Corrected position: Now it will be on top of the image (below the year) */
+  top: 13%; /* Corrected position */
 }
 
 .bottom-nav {
   bottom: 1px; /* Adjusted for more space */
-  pointer-events: auto; /* Ensure it does not block scrolling */
 }
 
 /* Add responsiveness */

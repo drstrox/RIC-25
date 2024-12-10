@@ -5,11 +5,13 @@ import './Gallery.css';
 const YearGallery = ({ images, year }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const containerRef = useRef(null);
+  const scrollTimeout = useRef(null);
 
   const handleWheel = (event) => {
-    // Prevent page scrolling while inside gallery
     event.preventDefault();
     event.stopPropagation();
+
+    if (scrollTimeout.current) return;
 
     const direction = event.deltaY > 0 ? 1 : -1;
     const nextIndex = imageIndex + direction;
@@ -17,6 +19,11 @@ const YearGallery = ({ images, year }) => {
     if (nextIndex >= 0 && nextIndex < images.length) {
       setImageIndex(nextIndex);
     }
+
+    // Debounce scroll
+    scrollTimeout.current = setTimeout(() => {
+      scrollTimeout.current = null;
+    }, 300);
   };
 
   useEffect(() => {
@@ -45,13 +52,9 @@ const YearGallery = ({ images, year }) => {
   };
 
   return (
-    <div 
-      className="year-column" 
-      ref={containerRef}
-    >
+    <div className="year-column" ref={containerRef}>
       <h3 className="year-heading">{year}</h3>
       
-      {/* Previous Button over the image */}
       {imageIndex > 0 && (
         <button className="gallery-nav-button top-nav" onClick={navigatePrevious}>
           <ChevronUp size={24} />
@@ -62,10 +65,10 @@ const YearGallery = ({ images, year }) => {
         <img 
           src={images[imageIndex]} 
           alt={`Image ${imageIndex + 1}`} 
+          className="gallery-image"
         />
       </div>
       
-      {/* Next Button over the image */}
       {imageIndex < images.length - 1 && (
         <button className="gallery-nav-button bottom-nav" onClick={navigateNext}>
           <ChevronDown size={24} />
