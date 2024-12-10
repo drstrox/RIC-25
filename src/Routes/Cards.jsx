@@ -5,7 +5,32 @@ const Card = ({ dataImage, header, content }) => {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the card is visible
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const { offsetWidth, offsetHeight } = cardRef.current;
@@ -30,6 +55,10 @@ const Card = ({ dataImage, header, content }) => {
 
   const cardStyle = {
     transform: `rotateY(${mousePX * 30}deg) rotateX(${mousePY * -30}deg)`,
+    opacity: isVisible ? 1 : 0,
+    transition: "opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95)",
+    transformOrigin: "center center",
+    transformStyle: "preserve-3d",
   };
 
   const cardBgStyle = {
@@ -39,7 +68,7 @@ const Card = ({ dataImage, header, content }) => {
 
   return (
     <div
-      className="card-wrap"
+      className={`card-wrap ${isVisible ? 'visible' : ''}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={cardRef}
