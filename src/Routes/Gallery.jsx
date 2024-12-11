@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronUp, ChevronDown } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './Gallery.css';
 
 const YearGallery = ({ images, year }) => {
@@ -8,22 +8,20 @@ const YearGallery = ({ images, year }) => {
   const scrollTimeout = useRef(null);
 
   const handleWheel = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
+    if (event.deltaX !== 0 && scrollTimeout.current === null) {
+      event.preventDefault();
+      const direction = event.deltaX > 0 ? 1 : -1;
+      const nextIndex = imageIndex + direction;
 
-    if (scrollTimeout.current) return;
+      if (nextIndex >= 0 && nextIndex < images.length) {
+        setImageIndex(nextIndex);
+      }
 
-    const direction = event.deltaY > 0 ? 1 : -1;
-    const nextIndex = imageIndex + direction;
-
-    if (nextIndex >= 0 && nextIndex < images.length) {
-      setImageIndex(nextIndex);
+      // Debounce scroll
+      scrollTimeout.current = setTimeout(() => {
+        scrollTimeout.current = null;
+      }, 300);
     }
-
-    // Debounce scroll
-    scrollTimeout.current = setTimeout(() => {
-      scrollTimeout.current = null;
-    }, 300);
   };
 
   useEffect(() => {
@@ -54,26 +52,23 @@ const YearGallery = ({ images, year }) => {
   return (
     <div className="year-column" ref={containerRef}>
       <h3 className="year-heading">{year}</h3>
-      
-      {imageIndex > 0 && (
-        <button className="gallery-nav-button top-nav" onClick={navigatePrevious}>
-          <ChevronUp size={24} />
-        </button>
-      )}
-      
       <div className="image-container">
-        <img 
-          src={images[imageIndex]} 
-          alt={`Image ${imageIndex + 1}`} 
+        {imageIndex > 0 && (
+          <button className="gallery-nav-button left-nav" onClick={navigatePrevious}>
+            <ChevronLeft size={24} />
+          </button>
+        )}
+        <img
+          src={images[imageIndex]}
+          alt={`Image ${imageIndex + 1}`}
           className="gallery-image"
         />
+        {imageIndex < images.length - 1 && (
+          <button className="gallery-nav-button right-nav" onClick={navigateNext}>
+            <ChevronRight size={24} />
+          </button>
+        )}
       </div>
-      
-      {imageIndex < images.length - 1 && (
-        <button className="gallery-nav-button bottom-nav" onClick={navigateNext}>
-          <ChevronDown size={24} />
-        </button>
-      )}
     </div>
   );
 };
@@ -81,28 +76,28 @@ const YearGallery = ({ images, year }) => {
 export const GalleryPage = () => {
   const years = {
     2024: [
-      "/images/2024-1.JPG", 
-      "/images/2024-2.JPG",
-      "/images/2024-3.JPG",
-      "/images/2024-4.JPG", 
-      "/images/2024-5.JPG",
-      "/images/2024-6.JPG", 
-      "/images/2024-7.JPG",
-      "/images/2024-8.JPG", 
-      "/images/2024-9.JPG",
-      "/images/2024-10.JPG"
-    ],
+        "/images/2024-1.JPG", 
+        "/images/2024-2.JPG",
+        "/images/2024-3.JPG",
+        "/images/2024-4.JPG", 
+        "/images/2024-5.JPG",
+        "/images/2024-6.JPG", 
+        "/images/2024-7.JPG",
+        "/images/2024-8.JPG", 
+        "/images/2024-9.JPG",
+        "/images/2024-10.JPG"
+          ],
     2023: [
-      "/images/2023-1.png", 
-      "/images/2023-2.png",
-      "/images/2023-3.png",
-      "/images/2023-4.png", 
-      "/images/2023-5.png",
-      "/images/2023-6.png", 
-      "/images/2023-7.png",
-      "/images/2023-8.png",
-      "/images/2023-9.png"
-    ]
+        "/images/2023-1.png", 
+        "/images/2023-2.png",
+        "/images/2023-3.png",
+        "/images/2023-4.png", 
+        "/images/2023-5.png",
+        "/images/2023-6.png", 
+        "/images/2023-7.png",
+        "/images/2023-8.png",
+        "/images/2023-9.png"
+      ]
   };
 
   return (
