@@ -6,7 +6,7 @@ import { ArrowRight } from 'react-feather'; // Assuming you're using `react-feat
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
-import { Teams } from './Routes/Teams';
+import Teams from './Routes/Teams';
 
 function App() {
   return (

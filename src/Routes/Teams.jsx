@@ -1,118 +1,124 @@
-import React from "react";
-import "./Cards.css";
+import React from 'react';
+import './Teams.css';
 
-const TeamMember = ({ imgSrc, name }) => (
-  <div className="member">
-    <img src={imgSrc} alt={name} />
-    <p>{name}</p>
-  </div>
-);
+const Team = ({ teamName, headImg, headName, members }) => {
+  return (
+    <div className="team-card-professional">
+      <div className="team-head-section">
+        <div className="team-title">{teamName}</div>
+        <div className="team-head-content">
+          <div className="team-row">
+            {/* Team Head Image wrapped with "HEAD" tag */}
+            <div className="team-head-tag">
+              <div className="team-head-image-container">
+                <img 
+                  src={headImg} 
+                  alt={`${teamName} Head`} 
+                  className="team-head-image" 
+                />
+              </div>
+              <p className="team-head-name">{headName}</p> {/* Name of the Team Head */}
+            </div>
 
-const Team = ({ teamName, teamHead, headImg, members }) => (
-  <div className="team">
-    <h3>{teamName}</h3>
-    <div className="team-layout">
-      <div className="team-head">
-        <img src={headImg} alt={`${teamName} Head`} />
-        <p>
-          {teamHead.name}
-          <br />
-          <span>{teamHead.role}</span>
-        </p>
-      </div>
-      <div className="team-members">
-        <div className="members-carousel">
-          {members.map((member, index) => (
-            <TeamMember key={index} imgSrc={member.imgSrc} name={member.name} />
-          ))}
+            {/* Team Members */}
+            <div className="team-members-row">
+              {members.map((member, index) => (
+                <div key={index} className="member-card">
+                  <div className="member-image-container">
+                    <img 
+                      src={member.imgSrc} 
+                      alt={member.name} 
+                      className="member-image" 
+                    />
+                  </div>
+                  <p className="member-name">{member.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Teams = () => {
   const teamsData = [
     {
-      teamName: "Web Development Team",
-      teamHead: { name: "Aayush Yadav", role: "Web Dev Head" },
-      headImg: "webdesign-head.jpg",
+      teamName: "Web Design",
+      headImg: "/team_members/Aayush Yadav.jpg",
+      headName: "Aayush Yadav",  // Name of the team head
       members: [
-        { imgSrc: "wMember1.jpg", name: "Aashish Donth" },
-        { imgSrc: "wMember2.jpg", name: "Nidarsana M" },
-        { imgSrc: "wMember3.jpg", name: "Rachakonda Chandrahasa" },
+        { imgSrc: "/team_members/Ashish Donth.jpg", name: "Ashish Donth" },
+        { imgSrc: "/team_members/Nidarsana M.jpg", name: "Nidarsana M" },
+        { imgSrc: "/team_members/Rachakonda Chandrahasa.jpg", name: "Rachakonda Chandrahasa" },
+        { imgSrc: "/team_members/Additional Member.jpg", name: "Additional Member" }
       ],
     },
     {
-      teamName: "Event Management and Publicity Team",
-      teamHead: { name: "Sri Varsha", role: "Event Management and Publicity Head" },
-      headImg: "webdesign-head.jpg",
+      teamName: "Event Management",
+      headImg: "/team_members/Sri Varsha Dodda.jpg",
+      headName: "Sri Varsha Dodda",  // Name of the team head
       members: [
-        { imgSrc: "wMember1.jpg", name: "Devi Sri Prasad" },
-        { imgSrc: "wMember2.jpg", name: "Vansh Gupta" },
-        { imgSrc: "wMember3.jpg", name: "Sarath Chandra" },
-        { imgSrc: "wMember1.jpg", name: "Sai Adithya Mannepalli" },
-        { imgSrc: "wMember2.jpg", name: "Pratul Pan" },
-        { imgSrc: "wMember3.jpg", name: "Jagruthi" },
-        { imgSrc: "wMember3.jpg", name: "Bhasuru Nikhil" },
-
+        { imgSrc: "/team_members/Budireddy Devi.jpeg", name: "Devi Sri Prasad" },
+        { imgSrc: "/team_members/Vansh Gupta.jpg", name: "Vansh Gupta" },
+        { imgSrc: "/team_members/Karanam Venkata Lakshmi Sarath Chandra.jpg", name: "Sarath Chandra" },
+        { imgSrc: "/team_members/Additional Event Member.jpg", name: "Additional Member" }
       ],
     },
     {
       teamName: "Marketing",
-      teamHead: { name: "Praneeth Chitrapu", role: "Marketing Head" },
       headImg: "marketing-head.jpg",
+      headName: "Marketing Head",  // Name of the team head
       members: [
-        { imgSrc: "mkMember1.jpg", name: "Aman Choudhary" },
-        { imgSrc: "mkMember2.jpg", name: "Aniket Goyal" },
-        { imgSrc: "mkMember3.jpg", name: "Sudhishna Ravichandran " },
-        { imgSrc: "mkMember4.jpg", name: "Akash Kumar Singh" },
-        { imgSrc: "mkMember4.jpg", name: "Sathvik Rathod" },
-        { imgSrc: "mkMember4.jpg", name: "Vijaygiri Sudhiksha" },
-        { imgSrc: "mkMember4.jpg", name: "Arnav Birari" },
+        { imgSrc: "Aman Choudhary.jpg", name: "Aman Choudhary" },
+        { imgSrc: "Aniket Goyal.jpg", name: "Aniket Goyal" },
+        { imgSrc: "Sudhishna Ravichandran.jpg", name: "Sudhishna Ravichandran" },
+        { imgSrc: "Additional Marketing Member.jpg", name: "Additional Member" }
+      ],
+    },
+    {
+      teamName: "Content",
+      headImg: "content-head.jpg",
+      headName: "Content Head",  // Name of the team head
+      members: [
+        { imgSrc: "Poorvansh Dashore.jpg", name: "Poorvansh Dashore" },
+        { imgSrc: "Nekkanti Vedh.jpeg", name: "Vedh Nekkanti" },
+        { imgSrc: "Devanshi Kawlani.jpg", name: "Devanshi Kawlani" },
+        { imgSrc: "Additional Content Member.jpg", name: "Additional Member" }
       ],
     },
     {
       teamName: "Outreach",
-      teamHead: { name: "Aditi Luniya", role: "Outreach Head" },
-      headImg: "Outreach-head.jpg",
+      headImg: "outreach-head.jpg",
+      headName: "Outreach Head",  // Name of the team head
       members: [
-        { imgSrc: "oMember1.jpg", name: "Yash Modi" },
-        { imgSrc: "oMember2.jpg", name: "Kumar Subham Barik " },
-        { imgSrc: "oMember3.jpg", name: "Vanshika Gupta" },
-        { imgSrc: "oMember4.jpg", name: "Kesavarapu Deepak Reddy" },
-        { imgSrc: "oMember5.jpg", name: "Sohil Dangi" },
-        { imgSrc: "oMember6.jpg", name: "Arnav Verma" },
-        { imgSrc: "oMember7.jpg", name: "Jay Vyas" },
-      ],
-    },
-    {
-      teamName: "Content and Creative Team",
-      teamHead: { name: "K Brahmisree", role: "Content and Creative Head" },
-      headImg: "webdesign-head.jpg",
-      members: [
-        { imgSrc: "wMember1.jpg", name: "Poorvansh Dashore" },
-        { imgSrc: "wMember2.jpg", name: "Vedh Nekkanti" },
-        { imgSrc: "wMember3.jpg", name: "Devanshi Kawlani" },
-        { imgSrc: "wMember3.jpg", name: "Gnanadeep" },
+        { imgSrc: "Member1.jpg", name: "Member 1" },
+        { imgSrc: "Member2.jpg", name: "Member 2" },
+        { imgSrc: "Member3.jpg", name: "Member 3" },
+        { imgSrc: "Additional Outreach Member.jpg", name: "Additional Member" }
       ],
     },
   ];
 
   return (
-    <section className="teams">
-      <h2>Teams</h2>
-      {teamsData.map((team, index) => (
-        <Team
-          key={index}
-          teamName={team.teamName}
-          teamHead={team.teamHead}
-          headImg={team.headImg}
-          members={team.members}
-        />
-      ))}
+    <section className="teams-section">
+      <div className="container">
+        <h2 className="teams-title">Our Teams</h2>
+        <div className="teams-grid">
+          {teamsData.map((team, index) => (
+            <Team
+              key={index}
+              teamName={team.teamName}
+              headImg={team.headImg}
+              headName={team.headName}  // Pass the head name
+              members={team.members}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
 
-export { Teams };
+export default Teams;
