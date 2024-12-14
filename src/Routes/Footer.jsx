@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const SOCIAL_LINKS = [
@@ -8,12 +8,12 @@ const SOCIAL_LINKS = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-purple-800 via-blue-800 to-teal-800 text-white py-8 sm:py-10">
+    <footer className="bg-[#192230] text-white py-8 sm:py-10">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
-            <h4 className="text-xl sm:text-2xl font-bold mb-3 text-teal-300">
+            <h4 className="text-xl sm:text-2xl font-bold mb-3 text-blue-300">
               Research & Industrial Conclave
             </h4>
             <p className="text-sm sm:text-base text-gray-300 mb-4">
@@ -27,7 +27,7 @@ const Footer = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-teal-300 transition-transform transform hover:scale-110"
+                  className="text-gray-300 hover:text-blue-300 transition-transform transform hover:scale-110"
                 >
                   <Icon size={30} />
                 </a>
@@ -37,16 +37,16 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-teal-300">Contact Us</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">Contact Us</h4>
             <div className="space-y-3 text-sm sm:text-base">
               <div className="flex items-center space-x-3">
-                <FaMapMarkerAlt className="text-teal-400 shrink-0" />
+                <FaMapMarkerAlt className="text-blue-400 shrink-0" />
                 <span className="text-gray-300 truncate">
                   IIT Indore, Simrol, Madhya Pradesh 453552
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaEnvelope className="text-teal-400 shrink-0" />
+                <FaEnvelope className="text-blue-400 shrink-0" />
                 <a 
                   href="mailto:acad.council@iiti.ac.in" 
                   className="text-gray-300 hover:text-white transition-colors truncate"
@@ -55,7 +55,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <FaPhone className="text-teal-400 shrink-0" />
+                <FaPhone className="text-blue-400 shrink-0" />
                 <span className="text-gray-300">+91 99591 31509</span>
               </div>
             </div>
@@ -63,13 +63,13 @@ const Footer = () => {
 
           {/* OC Contact Section */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-teal-300">OC Contacts</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">OC Contacts</h4>
             <div className="space-y-4 text-sm sm:text-base text-gray-300">
               <div>
                 <h5 className="font-bold text-white">Mohit Tiwari</h5>
                 <p className="text-gray-300">Position: OC-PG</p>
                 <div className="flex items-center space-x-3">
-                  <FaEnvelope className="text-teal-400 shrink-0" />
+                  <FaEnvelope className="text-blue-400 shrink-0" />
                   <a 
                     href="mailto:ocpg@iitindore.ac.in" 
                     className="text-gray-300 hover:text-white transition-colors truncate"
@@ -78,7 +78,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FaPhone className="text-teal-400 shrink-0" />
+                  <FaPhone className="text-blue-400 shrink-0" />
                   <span className="text-gray-300">+91 76949 54133</span>
                 </div>
               </div>
@@ -86,7 +86,7 @@ const Footer = () => {
                 <h5 className="font-bold text-white">Keerthan Pragnay</h5>
                 <p className="text-gray-300">Position: OC-UG</p>
                 <div className="flex items-center space-x-3">
-                  <FaEnvelope className="text-teal-400 shrink-0" />
+                  <FaEnvelope className="text-blue-400 shrink-0" />
                   <a 
                     href="mailto:ocug@iitindore.ac.in" 
                     className="text-gray-300 hover:text-white transition-colors truncate"
@@ -95,7 +95,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FaPhone className="text-teal-400 shrink-0" />
+                  <FaPhone className="text-blue-400 shrink-0" />
                   <span className="text-gray-300">+91 88853 33459</span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 pt-6 border-t border-gray-600 text-center">
+        <div className="mt-8 pt-6 border-t border-gray-700 text-center">
           <p className="text-xs sm:text-sm text-gray-300">
             © 2024 Research and Industrial Conclave, IIT Indore. All Rights Reserved.
           </p>

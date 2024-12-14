@@ -8,6 +8,7 @@ import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
 import Teams from './Routes/Teams';
 
+
 function App() {
   return (
     <Router>
