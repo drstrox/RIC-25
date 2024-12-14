@@ -267,3 +267,39 @@
         transform: translateY(0);
     }
 }
+.team-head-image-container,
+.member-image-container {
+  position: relative;
+}
+
+.team-head-social-icons,
+.member-social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px 0;
+}
+
+.team-head-image-container:hover .team-head-social-icons,
+.member-image-container:hover .member-social-icons {
+  opacity: 1;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--color-accent);
+  transform: scale(1.2);
+}

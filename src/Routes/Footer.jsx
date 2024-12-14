@@ -63,7 +63,7 @@ const Footer = () => {
 
           {/* OC Contact Section */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">OC Contacts</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">Overall Co-ordinators (OC)</h4>
             <div className="space-y-4 text-sm sm:text-base text-gray-300">
               <div>
                 <h5 className="font-bold text-white">Mohit Tiwari</h5>
