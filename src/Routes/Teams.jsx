@@ -52,7 +52,6 @@ const Teams = () => {
         { imgSrc: '/team_members/Ashish Donth.jpg', name: 'Ashish Donth' },
         { imgSrc: '/team_members/Nidarsana M.jpg', name: 'Nidarsana M' },
         { imgSrc: '/team_members/Rachakonda Chandrahasa.jpg', name: 'Rachakonda Chandrahasa' },
-        { imgSrc: '/team_members/Additional Member.jpg', name: 'Additional Member' }
       ]
     },
     {
@@ -63,42 +62,63 @@ const Teams = () => {
         { imgSrc: '/team_members/Budireddy Devi.jpeg', name: 'Devi Sri Prasad' },
         { imgSrc: '/team_members/Vansh Gupta.jpg', name: 'Vansh Gupta' },
         { imgSrc: '/team_members/Karanam Venkata Lakshmi Sarath Chandra.jpg', name: 'Sarath Chandra' },
-        { imgSrc: '/team_members/Additional Event Member.jpg', name: 'Additional Member' }
+        { imgSrc: '/team_members/Vansh Gupta.jpg', name: 'Vansh Gupta' },
+        { imgSrc: '/team_members/Bojja Jagruthi.jpg', name: 'Jagruthi' },
+        { imgSrc: '/team_members/Pratul Pan.jpg', name: 'Pratul Pan' },
+        { imgSrc: '/team_members/Bhasuru Nikhil.jpg', name: 'Bhasuru Nikhil ' },
+        { imgSrc: '/team_members/Mannepalli Sai Adithya.jpeg', name: 'Sai Adithya Mannepalli'}
       ]
     },
     {
       teamName: 'Marketing',
-      headImg: 'marketing-head.jpg',
-      headName: 'Marketing Head',
+      headImg: '/team_members/Praneeth.jpg',
+      headName: 'Praneeth Chitrapu',
       members: [
-        { imgSrc: 'Aman Choudhary.jpg', name: 'Aman Choudhary' },
-        { imgSrc: 'Aniket Goyal.jpg', name: 'Aniket Goyal' },
-        { imgSrc: 'Sudhishna Ravichandran.jpg', name: 'Sudhishna Ravichandran' },
-        { imgSrc: 'Additional Marketing Member.jpg', name: 'Additional Member' }
+        { imgSrc: '/team_members/Aman Choudhary.jpg', name: 'Aman Choudhary' },
+        { imgSrc: '/team_members/Aniket Goyal.jpg', name: 'Aniket Goyal' },
+        { imgSrc: '/team_members/Sudhishna Ravichandran.jpg', name: 'Sudhishna Ravichandran' },
+        { imgSrc: '/team_members/Vijayagiri Sudhiksha.jpg', name: 'Vijayagiri Sudhiksha' },
+        { imgSrc: '/team_members/Arnav Nitin Birari.jpg', name: 'Arnav Nitin Birari' },
+        { imgSrc: '/team_members/Yadavalli Akshay Kumar.jpeg', name: 'Akshay' }
       ]
     },
     {
-      teamName: 'Content',
-      headImg: 'content-head.jpg',
-      headName: 'Content Head',
+      teamName: 'Creatives and Content',
+      // headImg: 'content-head.jpg',
+      // headName: 'Content Head',
       members: [
-        { imgSrc: 'Poorvansh Dashore.jpg', name: 'Poorvansh Dashore' },
-        { imgSrc: 'Nekkanti Vedh.jpeg', name: 'Vedh Nekkanti' },
-        { imgSrc: 'Devanshi Kawlani.jpg', name: 'Devanshi Kawlani' },
-        { imgSrc: 'Additional Content Member.jpg', name: 'Additional Member' }
+        { imgSrc: '/team_members/Poorvansh Dashore.jpg', name: 'Poorvansh Dashore' },
+        { imgSrc: '/team_members/Nekkanti Vedh.jpeg', name: 'Vedh Nekkanti' },
+        { imgSrc: '/team_members/Devanshi Kawlani.jpg', name: 'Devanshi Kawlani' },
+        { imgSrc: '/team_members/Eshika Pawar.jpg', name: 'Eshika Pawar' }
       ]
     },
     {
       teamName: 'Outreach',
-      headImg: 'outreach-head.jpg',
-      headName: 'Outreach Head',
+      headImg: '/team_members/Aditi.jpg',
+      headName: 'ADITI LUNIYA',
       members: [
-        { imgSrc: '/team_members/Vanshika Gupta.jpeg', name: 'Member 1' },
-        { imgSrc: 'Member2.jpg', name: 'Member 2' },
-        { imgSrc: 'Member3.jpg', name: 'Member 3' },
-        { imgSrc: 'Additional Outreach Member.jpg', name: 'Additional Member' }
+        { imgSrc: '/team_members/Vanshika Gupta.jpeg', name: 'Vanshika Gupta' },
+        { imgSrc: '/team_members/Yash Brijesh Modi.jpeg', name: 'Yash Modi' },
+        { imgSrc: '/team_members/Sohil Dangi.jpg', name: 'Sohil Dangi ' },
+        { imgSrc: '/team_members/Kumar Subham.webp', name: 'Kumar Subham Barik' },
+        { imgSrc: '/team_members/Madasi Benin.jpeg', name: 'M Benin' },
+        { imgSrc: '/team_members/Arnav Verma.jpg', name: 'Arnav Verma' },
+        { imgSrc: '/team_members/Akash Kumar Singh.jpg', name: 'Akash Kumar Singh' }
+      ]
+    },
+    {
+      teamName: 'Logistics and Hospitality',
+      headImg: '/team_members/Rajeev.jpg',
+      headName: 'RAJEEV KADALI',
+      members: [
+        { imgSrc: '/team_members/Jairaj Lad.jpg', name: 'Jairaj Lad' },
+        { imgSrc: '/team_members/Kanakam Abhishek.jpg', name: 'Kanakam Abhishek' },
+        { imgSrc: '/team_members/Dodiya Monik Dilipbhai.jpg', name: 'Monik' },
+        { imgSrc: '/team_members/Banoth Rohith.jpeg', name: 'Rohith'}
       ]
     }
+    
   ];
 
   return (
@@ -112,7 +132,7 @@ const Teams = () => {
         {/* GS Acads Card */}
         <div className="position-card">
             <div className="position-image-container">
-                <img className="position-image" src="/path/to/gs-acads-image.jpg" alt="GS Acads" />
+                <img className="position-image" src="/team_members/Rithvik.jpg" alt="GS Acads" />
             </div>
             <h3 className="position-title">GS Acads</h3>
             <p className="position-name">Rithvik</p> 
