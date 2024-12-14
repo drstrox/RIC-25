@@ -54,8 +54,8 @@ const eventsData = [
 
 export const Events = () => {
   return (
-    <div className="events-section">
-      <h2 className="events-title">Our Events</h2>
+    <div className="events-section container">
+      <h2 className="events-title">OUR EVENTS</h2>
       <div className="events-grid">
         {eventsData.map((event, index) => (
           <div className="event-card" key={index}>
