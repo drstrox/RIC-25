@@ -6,6 +6,7 @@ import { ArrowRight } from 'react-feather'; // Assuming you're using `react-feat
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
+import { Events } from './Routes/Events';
 import Teams from './Routes/Teams';
 
 
@@ -18,6 +19,7 @@ function App() {
       {/* Main content and routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/team" element={<Teams />} />
         <Route path="/settings" element={<SettingsPage />} />
