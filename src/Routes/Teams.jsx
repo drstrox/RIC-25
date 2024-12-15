@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './Teams.css';
 
 const Team = ({ teamName, headImg, headName, headSocials, members }) => {
@@ -37,16 +37,6 @@ const Team = ({ teamName, headImg, headName, headSocials, members }) => {
                         className="social-icon"
                       >
                         <FaInstagram />
-                      </a>
-                    )}
-                    {headSocials.github && (
-                      <a 
-                        href={headSocials.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                      >
-                        <FaGithub />
                       </a>
                     )}
                   </div>
@@ -87,16 +77,6 @@ const Team = ({ teamName, headImg, headName, headSocials, members }) => {
                             <FaInstagram />
                           </a>
                         )}
-                        {member.socials.github && (
-                          <a 
-                            href={member.socials.github} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="social-icon"
-                          >
-                            <FaGithub />
-                          </a>
-                        )}
                       </div>
                     )}
                   </div>
@@ -120,7 +100,6 @@ const Teams = () => {
       headSocials: {
         linkedin: 'https://www.linkedin.com/in/aayush-yadav',
         instagram: 'https://www.instagram.com/aayushyadav',
-        github: 'https://github.com/aayushyadav'
       },
       members: [
         { 
@@ -129,7 +108,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/ashish-donth',
             instagram: 'https://www.instagram.com/ashishdonth',
-            github: 'https://github.com/ashishdonth'
           }
         },
         { 
@@ -138,7 +116,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/nidarsana-m',
             instagram: 'https://www.instagram.com/nidarsana_m',
-            github: 'https://github.com/nidarsanam'
           }
         },
         { 
@@ -147,7 +124,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/chandrahasa',
             instagram: 'https://www.instagram.com/chandrahasa',
-            github: 'https://github.com/chandrahasa'
           }
         },
       ]
@@ -159,7 +135,6 @@ const Teams = () => {
       headSocials: {
         linkedin: 'https://www.linkedin.com/in/sri-varsha-dodda',
         instagram: 'https://www.instagram.com/varshadodda',
-        github: 'https://github.com/varshadodda'
       },
       members: [
         { 
@@ -168,7 +143,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/devi-sri-prasad',
             instagram: 'https://www.instagram.com/devisriprasad',
-            github: 'https://github.com/devisriprasad'
           }
         },
         { 
@@ -177,7 +151,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vansh-gupta',
             instagram: 'https://www.instagram.com/vanshgupta',
-            github: 'https://github.com/vanshgupta'
           }
         },
         { 
@@ -186,7 +159,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/sarath-chandra',
             instagram: 'https://www.instagram.com/sarathchandra',
-            github: 'https://github.com/sarathchandra'
           }
         },
         { 
@@ -195,7 +167,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/jagruthi',
             instagram: 'https://www.instagram.com/jagruthi',
-            github: 'https://github.com/jagruthi'
           }
         },
         { 
@@ -204,7 +175,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/pratul-pan',
             instagram: 'https://www.instagram.com/pratulpan',
-            github: 'https://github.com/pratulpan'
           }
         },
         { 
@@ -213,7 +183,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/bhasuru-nikhil',
             instagram: 'https://www.instagram.com/bhasuru_nikhil',
-            github: 'https://github.com/bhasuru-nikhil'
           }
         },
         { 
@@ -222,7 +191,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/sai-adithya-mannepalli',
             instagram: 'https://www.instagram.com/sai_adithya_mannepalli',
-            github: 'https://github.com/sai-adithya-mannepalli'
           }
         }
       ]
@@ -234,7 +202,6 @@ const Teams = () => {
       headSocials: {
         linkedin: 'https://www.linkedin.com/in/praneeth-chitrapu',
         instagram: 'https://www.instagram.com/praneethchitrapu',
-        github: 'https://github.com/praneethchitrapu'
       },
       members: [
         { 
@@ -243,7 +210,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/aman-choudhary',
             instagram: 'https://www.instagram.com/amanchoudhary',
-            github: 'https://github.com/amanchoudhary'
           }
         },
         { 
@@ -252,7 +218,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/aniket-goyal',
             instagram: 'https://www.instagram.com/aniketgoyal',
-            github: 'https://github.com/aniketgoyal'
           }
         },
         { 
@@ -261,7 +226,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/sudhishna-ravichandran',
             instagram: 'https://www.instagram.com/sudhishna_r',
-            github: 'https://github.com/sudhishna'
           }
         },
         { 
@@ -270,7 +234,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vijayagiri-sudhiksha',
             instagram: 'https://www.instagram.com/sudhiksha_vijayagiri',
-            github: 'https://github.com/sudhiksha'
           }
         },
         { 
@@ -279,7 +242,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/arnav-birari',
             instagram: 'https://www.instagram.com/arnav_birari',
-            github: 'https://github.com/arnav-birari'
           }
         },
         { 
@@ -288,7 +250,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/yadavalli-akshay-kumar',
             instagram: 'https://www.instagram.com/akshay_yadavalli',
-            github: 'https://github.com/akshay-yadavalli'
           }
         }
       ]
@@ -302,7 +263,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/poorvansh-dashore',
             instagram: 'https://www.instagram.com/poorvansh_dashore',
-            github: 'https://github.com/poorvansh-dashore'
           }
         },
         { 
@@ -311,7 +271,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vedh-nekkanti',
             instagram: 'https://www.instagram.com/vedh_nekkanti',
-            github: 'https://github.com/vedh-nekkanti'
           }
         },
         { 
@@ -320,7 +279,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/devanshi-kawlani',
             instagram: 'https://www.instagram.com/devanshi_kawlani',
-            github: 'https://github.com/devanshi-kawlani'
           }
         },
         { 
@@ -329,7 +287,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/eshika-pawar',
             instagram: 'https://www.instagram.com/eshika_pawar',
-            github: 'https://github.com/eshika-pawar'
           }
         }
       ]
@@ -341,7 +298,6 @@ const Teams = () => {
       headSocials: {
         linkedin: 'https://www.linkedin.com/in/aditi-luniya',
         instagram: 'https://www.instagram.com/aditi_luniya',
-        github: 'https://github.com/aditi-luniya'
       },
       members: [
         { 
@@ -350,7 +306,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
         },
         { 
@@ -359,7 +314,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
          },
         { imgSrc: '/team_members/Sohil Dangi.jpg', 
@@ -367,7 +321,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
         },
         { imgSrc: '/team_members/Kumar Subham.webp', 
@@ -375,7 +328,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
          },
         { imgSrc: '/team_members/Madasi Benin.jpeg', 
@@ -383,7 +335,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
         },
         { imgSrc: '/team_members/Arnav Verma.jpg', 
@@ -391,7 +342,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
          },
         { imgSrc: '/team_members/Akash Kumar Singh.jpg', 
@@ -399,7 +349,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           } 
         }
       ]
@@ -411,7 +360,6 @@ const Teams = () => {
       headSocials: {
         linkedin: 'https://www.linkedin.com/in/praneeth-chitrapu',
         instagram: 'https://www.instagram.com/praneethchitrapu',
-        github: 'https://github.com/praneethchitrapu'
       },
       members: [
         { imgSrc: '/team_members/Jairaj Lad.jpg', 
@@ -419,7 +367,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
         },
         { imgSrc: '/team_members/Kanakam Abhishek.jpg', 
@@ -427,7 +374,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
          },
         { imgSrc: '/team_members/Dodiya Monik Dilipbhai.jpg', 
@@ -435,7 +381,6 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
          },
         { imgSrc: '/team_members/Banoth Rohith.jpeg',
@@ -443,7 +388,6 @@ const Teams = () => {
            socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
-            github: 'https://github.com/vanshika-gupta'
           }
         }
       ]
@@ -485,14 +429,7 @@ const Teams = () => {
                     >
                         <FaInstagram />
                     </a>
-                    <a 
-                        href="https://github.com/rithvik-gs-acads" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaGithub />
-                    </a>
+                    
                 </div>
             </div>
             <h3 className="position-title">General Secretary Academics</h3>
@@ -527,14 +464,7 @@ const Teams = () => {
                     >
                         <FaInstagram />
                     </a>
-                    <a 
-                        href="https://github.com/mohit-tiwari-oc-pg" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaGithub />
-                    </a>
+                   
                 </div>
             </div>
             <h3 className="position-title">Overall Co-ordinator (PG)</h3>
@@ -569,14 +499,7 @@ const Teams = () => {
                     >
                         <FaInstagram />
                     </a>
-                    <a 
-                        href="https://github.com/keerthan-pragnay-oc-ug" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaGithub />
-                    </a>
+                   
                 </div>
             </div>
             <h3 className="position-title">Overall Co-ordinator (UG)</h3>
