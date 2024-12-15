@@ -14,29 +14,29 @@ const IconNameNavbar = () => {
     { name: 'Team', path: '/team', key: 'team' },
     { name: 'Gallery', path: '/gallery', key: 'gallery' },
     { name: 'Merch', path: '/merch', key: 'merch' },
-    { name: 'Brochure', path: '/calendar', key: 'calendar' },
+    { 
+      name: 'Brochure', 
+      path: 'https://drive.google.com/file/d/12G04v_wV-RKuse0c1Q9Yjy412d2b3E6J/view?usp=sharing', 
+      key: 'calendar', 
+      isDownload: true 
+    },
   ];
 
   useEffect(() => {
-    // Handle menu and mobile state on window resize
     const handleResize = () => {
       const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
 
-      // Reset mobile menu state when switching to desktop
       if (!mobile) {
         setIsMobileMenuOpen(false);
         setMenuItemsVisible(false);
       }
     };
 
-    // Add resize event listener
     window.addEventListener('resize', handleResize);
 
-    // Initial timer logic for mobile menu
     let timer;
     if (isMobileMenuOpen) {
-      // Slight delay to allow for CSS transition
       timer = setTimeout(() => {
         setMenuItemsVisible(true);
       }, 50);
@@ -44,7 +44,6 @@ const IconNameNavbar = () => {
       setMenuItemsVisible(false);
     }
 
-    // Cleanup event listener and timer
     return () => {
       window.removeEventListener('resize', handleResize);
       if (timer) clearTimeout(timer);
@@ -53,6 +52,10 @@ const IconNameNavbar = () => {
 
   const handleMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleBrochureClick = (url) => {
+    window.open(url, '_blank');
   };
 
   return (
@@ -110,7 +113,7 @@ const IconNameNavbar = () => {
             transition-all duration-300 ease-in-out
           `}
         >
-          {NavItems.map(({ name, path, key }, index) => (
+          {NavItems.map(({ name, path, key, isDownload }, index) => (
             <div 
               key={key}
               className={`
@@ -125,37 +128,46 @@ const IconNameNavbar = () => {
                   : '0ms'
               }}
             >
-              <Link
-                to={path}
-                className="relative group block md:inline-block my-4 md:my-0"
-                onMouseEnter={() => setIsHovered(key)}
-                onMouseLeave={() => setIsHovered(null)}
-              >
-                <span
-                  className={`
-                    transition-all duration-300 ease-in-out
-                    ${location.pathname === path || isHovered === key
-                      ? 'text-white scale-110'
-                      : 'text-gray-400'}
-                    hover:text-white hover:scale-110
-                  `}
+              {isDownload ? (
+                <button
+                  onClick={() => handleBrochureClick(path)}
+                  className="relative group block md:inline-block my-4 md:my-0 text-gray-400 hover:text-white transition-all duration-300 ease-in-out"
                 >
                   {name}
-                </span>
+                </button>
+              ) : (
+                <Link
+                  to={path}
+                  className="relative group block md:inline-block my-4 md:my-0"
+                  onMouseEnter={() => setIsHovered(key)}
+                  onMouseLeave={() => setIsHovered(null)}
+                >
+                  <span
+                    className={`
+                      transition-all duration-300 ease-in-out
+                      ${location.pathname === path || isHovered === key
+                        ? 'text-white scale-110'
+                        : 'text-gray-400'}
+                      hover:text-white hover:scale-110
+                    `}
+                  >
+                    {name}
+                  </span>
 
-                {/* Active/Hover Indicator - Hidden on Mobile */}
-                <div
-                  className={`
-                    absolute -bottom-2 left-1/2 transform -translate-x-1/2
-                    w-1.5 h-1.5 rounded-full
-                    transition-all duration-300 ease-in-out
-                    hidden md:block
-                    ${location.pathname === path || isHovered === key
-                      ? 'bg-gradient-to-r from-blue-400 to-purple-600 opacity-100 scale-100'
-                      : 'opacity-0 scale-0'}
-                  `}
-                />
-              </Link>
+                  {/* Active/Hover Indicator - Hidden on Mobile */}
+                  <div
+                    className={`
+                      absolute -bottom-2 left-1/2 transform -translate-x-1/2
+                      w-1.5 h-1.5 rounded-full
+                      transition-all duration-300 ease-in-out
+                      hidden md:block
+                      ${location.pathname === path || isHovered === key
+                        ? 'bg-gradient-to-r from-blue-400 to-purple-600 opacity-100 scale-100'
+                        : 'opacity-0 scale-0'}
+                    `}
+                  />
+                </Link>
+              )}
             </div>
           ))}
         </div>
