@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Events.css";
 
 const eventsData = [
@@ -53,12 +53,19 @@ const eventsData = [
 ];
 
 export const Events = () => {
+  const [activeCard, setActiveCard] = useState(null);
+
   return (
     <div className="events-section container">
       <h2 className="events-title">OUR EVENTS</h2>
       <div className="events-grid">
         {eventsData.map((event, index) => (
-          <div className="event-card" key={index}>
+          <div 
+            className={`event-card ${activeCard === index ? 'active' : ''}`} 
+            key={index}
+            onMouseEnter={() => setActiveCard(index)}
+            onMouseLeave={() => setActiveCard(null)}
+          >
             <div className="event-card-inner">
               <div className="event-front">
                 <div className="event-image-container">
@@ -68,7 +75,9 @@ export const Events = () => {
                     className="event-image"
                   />
                 </div>
-                <h3 className="event-name">{event.title}</h3>
+                <div className="event-front-content">
+                  <h3 className="event-name">{event.title}</h3>
+                </div>
               </div>
               <div className="event-back">
                 <p className="event-description">{event.description}</p>
