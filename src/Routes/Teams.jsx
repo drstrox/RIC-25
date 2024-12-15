@@ -98,8 +98,8 @@ const Teams = () => {
       headImg: '/team_members/Aayush Yadav.jpg',
       headName: 'Aayush Yadav',
       headSocials: {
-        linkedin: 'https://www.linkedin.com/in/aayush-yadav',
-        instagram: 'https://www.instagram.com/aayushyadav',
+        linkedin: 'https://www.linkedin.com/in/aayush-yadav-7a0b40282/',
+        instagram: 'https://www.instagram.com/drstrox/?hl=en',
       },
       members: [
         { 
@@ -114,8 +114,7 @@ const Teams = () => {
           imgSrc: '/team_members/Nidarsana M.jpg', 
           name: 'Nidarsana M',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/nidarsana-m',
-            instagram: 'https://www.instagram.com/nidarsana_m',
+            linkedin: 'https://www.linkedin.com/in/nidarsana-m/',
           }
         },
         { 
@@ -133,16 +132,16 @@ const Teams = () => {
       headImg: '/team_members/Sri Varsha Dodda.jpg',
       headName: 'Sri Varsha Dodda',
       headSocials: {
-        linkedin: 'https://www.linkedin.com/in/sri-varsha-dodda',
-        instagram: 'https://www.instagram.com/varshadodda',
+        linkedin: 'https://www.linkedin.com/in/sri-varsha-d-4b709a210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/_ahsrav._?igsh=Z2lxYWdhamRmNmIx',
       },
       members: [
         { 
           imgSrc: '/team_members/Budireddy Devi.jpeg', 
           name: 'Devi Sri Prasad',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/devi-sri-prasad',
-            instagram: 'https://www.instagram.com/devisriprasad',
+            linkedin: 'https://www.linkedin.com/in/budireddy-devi-sri-prasad-b46780341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+            instagram: 'https://www.instagram.com/devi_sri_prasad64/profilecard',
           }
         },
         { 
@@ -157,16 +156,16 @@ const Teams = () => {
           imgSrc: '/team_members/Karanam Venkata Lakshmi Sarath Chandra.jpg', 
           name: 'Sarath Chandra',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/sarath-chandra',
-            instagram: 'https://www.instagram.com/sarathchandra',
+            linkedin: 'https://www.linkedin.com/in/sarath-chandra-03ab0a338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/sarathchandra_kvl/profilecard/?igsh=bXl3N2hmMnBrbHlo',
           }
         },
         { 
           imgSrc: '/team_members/Bojja Jagruthi.jpg', 
           name: 'Jagruthi',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/jagruthi',
-            instagram: 'https://www.instagram.com/jagruthi',
+            linkedin: 'https://www.linkedin.com/in/jagruthi-bojja-315bb8334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/jagruthii__/profilecard/?igsh=OGxib3lvb3piaTN0',
           }
         },
         { 
@@ -181,8 +180,8 @@ const Teams = () => {
           imgSrc: '/team_members/Bhasuru Nikhil.jpg', 
           name: 'Bhasuru Nikhil',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/bhasuru-nikhil',
-            instagram: 'https://www.instagram.com/bhasuru_nikhil',
+            linkedin: 'https://www.linkedin.com/in/nikhil-bhasuru-2196a6314/',
+            instagram: 'https://www.instagram.com/nikhilb_183/',
           }
         },
         { 
@@ -224,8 +223,8 @@ const Teams = () => {
           imgSrc: '/team_members/Sudhishna Ravichandran.jpg', 
           name: 'Sudhishna Ravichandran',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/sudhishna-ravichandran',
-            instagram: 'https://www.instagram.com/sudhishna_r',
+            linkedin: 'https://www.linkedin.com/in/sudhishna-ravichandran-7b9279340',
+            instagram: 'https://www.instagram.com/emokaradi/profilecard/?igsh=MWE0dHgxZzZmZG12aw==',
           }
         },
         { 
@@ -326,8 +325,8 @@ const Teams = () => {
         { imgSrc: '/team_members/Kumar Subham.webp', 
           name: 'Kumar Subham Barik',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'https://www.linkedin.com/in/kumar-subham-barik-b24733281/',
+            instagram: 'https://www.instagram.com/kumarsubhambarik/',
           }
          },
         { imgSrc: '/team_members/Madasi Benin.jpeg', 
@@ -365,8 +364,8 @@ const Teams = () => {
         { imgSrc: '/team_members/Jairaj Lad.jpg', 
           name: 'Jairaj Lad',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'https://www.linkedin.com/in/jairaj-lad-985b29289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/jairajlad823/profilecard/?igsh=ZXkxc2s3NWo1NWEx',
           }
         },
         { imgSrc: '/team_members/Kanakam Abhishek.jpg', 
@@ -384,10 +383,10 @@ const Teams = () => {
           }
          },
         { imgSrc: '/team_members/Banoth Rohith.jpeg',
-           name: 'Rohith',
+           name: 'Rohith B',
            socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'https://www.linkedin.com/in/banoth-rohith-6b59322b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+            instagram: 'https://www.instagram.com/_rohith_017/profilecard/?igsh=ZDQ1MGRiY2lrbmly',
           }
         }
       ]
