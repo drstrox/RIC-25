@@ -8,6 +8,7 @@ import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
 import { Events } from './Routes/Events';
 import Teams from './Routes/Teams';
+import MerchPage from './Routes/Merch';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/merch" element={<MerchPage />} /> 
       </Routes>
        
  

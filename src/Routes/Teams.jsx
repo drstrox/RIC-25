@@ -357,8 +357,8 @@ const Teams = () => {
       headImg: '/team_members/Rajeev.jpg',
       headName: 'RAJEEV KADALI',
       headSocials: {
-        linkedin: 'https://www.linkedin.com/in/praneeth-chitrapu',
-        instagram: 'https://www.instagram.com/praneethchitrapu',
+        linkedin: 'https://www.linkedin.com/in/rajeev-kadali-900287327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+        instagram: 'https://www.instagram.com/rajeev._.kadali/profilecard/?igsh=MWdyNGJtODkxOGk4bw==',
       },
       members: [
         { imgSrc: '/team_members/Jairaj Lad.jpg', 
@@ -483,7 +483,7 @@ const Teams = () => {
                 />
                 <div className="position-social-icons">
                     <a 
-                        href="https://www.linkedin.com/in/keerthan-pragnay-oc-ug" 
+                        href="https://www.linkedin.com/in/keerthan-pragnay-a4368b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="social-icon"
@@ -491,7 +491,7 @@ const Teams = () => {
                         <FaLinkedin />
                     </a>
                     <a 
-                        href="https://www.instagram.com/keerthan_pragnay_oc_ug" 
+                        href="https://www.instagram.com/k1728__/profilecard/?igsh=N2R2MTdyNXVrYjht" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="social-icon"
