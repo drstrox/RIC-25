@@ -121,8 +121,8 @@ const Teams = () => {
           imgSrc: '/team_members/Rachakonda Chandrahasa.jpg', 
           name: 'Rachakonda Chandrahasa',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/chandrahasa',
-            instagram: 'https://www.instagram.com/chandrahasa',
+            linkedin: 'https://www.linkedin.com/in/chandrahasa-rachakonda-3201a92a6',
+            instagram: 'https://www.instagram.com/chandrahasa_206',
           }
         },
       ]
@@ -172,8 +172,8 @@ const Teams = () => {
           imgSrc: '/team_members/Pratul Pan.jpg', 
           name: 'Pratul Pan',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/pratul-pan',
-            instagram: 'https://www.instagram.com/pratulpan',
+            linkedin: 'https://www.linkedin.com/in/chandrahasa-rachakonda-3201a92a6',
+            instagram: 'https://www.instagram.com/pratulpan/?__pwa=1',
           }
         },
         { 
@@ -207,8 +207,8 @@ const Teams = () => {
           imgSrc: '/team_members/Aman Choudhary.jpg', 
           name: 'Aman Choudhary',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/aman-choudhary',
-            instagram: 'https://www.instagram.com/amanchoudhary',
+            linkedin: 'https://www.linkedin.com/in/aman-choudhary-954833292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/_aman.chou_/profilecard/?igsh=MXVxdjV2ZGsxZW9kdA==',
           }
         },
         { 
@@ -231,8 +231,8 @@ const Teams = () => {
           imgSrc: '/team_members/Vijayagiri Sudhiksha.jpg', 
           name: 'Vijayagiri Sudhiksha',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vijayagiri-sudhiksha',
-            instagram: 'https://www.instagram.com/sudhiksha_vijayagiri',
+            linkedin: 'https://in.linkedin.com/in/vijayagiri-sudhiksha-93b88b340',
+            instagram: 'https://www.instagram.com/sudhiksha_vijayagiri/profilecard/?igsh=cW9wdG5jbzJwZW1r',
           }
         },
         { 
@@ -276,8 +276,8 @@ const Teams = () => {
           imgSrc: '/team_members/Devanshi Kawlani.jpg', 
           name: 'Devanshi Kawlani',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/devanshi-kawlani',
-            instagram: 'https://www.instagram.com/devanshi_kawlani',
+            linkedin: 'https://www.linkedin.com/in/devanshi-kawlani-21967b330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/_.devanshii12/profilecard/?igsh=MXdzZnBpY3VodTAwbQ==',
           }
         },
         { 
