@@ -68,16 +68,16 @@ export const Events = () => {
           >
             <div className="event-card-inner">
               <div className="event-front">
-                <div className="event-image-container">
+                {/* <div className="event-image-container"> */}
                   <img 
                     src={event.image} 
                     alt={event.title} 
                     className="event-image"
                   />
-                </div>
-                <div className="event-front-content">
+                {/* s */}
+                {/* <div className="event-front-content">
                   <h3 className="event-name">{event.title}</h3>
-                </div>
+                </div> */}
               </div>
               <div className="event-back">
                 <p className="event-description">{event.description}</p>
