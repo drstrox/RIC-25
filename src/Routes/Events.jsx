@@ -4,7 +4,7 @@ import "./Events.css";
 const eventsData = [
   {
     title: "PROBLEM STATEMENTS BY INDUSTRY",
-    image: "https://via.placeholder.com/400",
+    image: "event/problem statement.jpg",
     description: "Every industry faces unique challenges that demand innovative solutions. From digital transformation in tech to streamlining operations in manufacturing, businesses must adapt to constant change. Retail struggles with customer retention, healthcare with data security, and finance with compliance. By addressing these pain points, we help industries embrace innovation and unlock new opportunities for growth.",
     formLink: "#",
   },
@@ -16,7 +16,7 @@ const eventsData = [
   },
   {
     title: "THE B.TECH. PROJECT (BTP)",
-    image: "https://via.placeholder.com/400",
+    image: "event/project.jpg",
     description: "The B.Tech Project (BTP) is a platform for final-year students to showcase the skills and knowledge they've developed during their undergraduate journey. It allows students to dive deep into their chosen fields, tackling real-world problems and exploring innovative solutions. BTPs highlight creativity, technical expertise, and a hands-on approach to learning. This initiative not only helps students refine their problem-solving abilities but also provides a chance to present their work to peers, mentors, and industry professionals.",
     formLink: "#",
   },
@@ -34,7 +34,7 @@ const eventsData = [
   },
   {
     title: "STARTUP EXPO",
-    image: "https://via.placeholder.com/400",
+    image: "event/startup.jpg",
     description: "Startup Expo is an exciting event that brings together innovative startups to showcase their groundbreaking ideas and products. It is an opportunity to connect with entrepreneurs, industry leaders, and investors, while exploring the latest trends and technologies. By participating, you can gain valuable exposure for your startup, receive feedback, and expand your network. The Expo provides a platform to share your vision, attract potential partners, and unlock new opportunities, all while being part of a dynamic and inspiring entrepreneurial community.",
     formLink: "#",
   },
