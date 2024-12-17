@@ -14,10 +14,11 @@ import MerchPage from './Routes/Merch';
 function App() {
   return (
     <Router>
-     
+
       <IconNameNavbar />
 
       {/* Main content and routes */}
+      <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/events" element={<Events />} />
@@ -26,12 +27,14 @@ function App() {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/merch" element={<MerchPage />} /> 
+        <Route path="/merch" element={<MerchPage />} />
       </Routes>
-       
- 
-       <Footer/>
-      
+      </div>
+
+
+
+      <Footer />
+
     </Router>
   );
 }
@@ -82,7 +85,7 @@ const HomePage = () => {
             {/* Responsive Text Sizing */}
             <div className="overflow-hidden">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text animate-line-draw">
-                Research 
+                Research
               </h1>
             </div>
             <div className="overflow-hidden">
@@ -100,57 +103,68 @@ const HomePage = () => {
               Pioneering interdisciplinary research and bridging the gap between
               academic innovation and industrial implementation at IIT Indore.
             </p>
-            
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-  <button className="
-    w-full sm:w-auto 
-    px-6 py-3 
-    bg-opacity-30 backdrop-blur-md bg-[#0a192f] shadow-lg
-    rounded-full 
-    text-white 
-    relative 
-    overflow-hidden 
-    transform transition-all duration-300 
-    hover:scale-[1.02]
-    active:translate-y-1
-    shadow-xl
-    hover:shadow-2xl
-    before:absolute 
-    before:inset-0 
-    before:bg-white 
-    before:opacity-0 
-    before:transition-opacity 
-    hover:before:opacity-10
-    3d-button
 
-  ">
-    <span className="relative z-10">Explore Research</span>
-  </button>
-  
-  <button className="
-    w-full sm:w-auto 
-    px-6 py-3 
-    border border-blue-300 
-    text-blue-300 
-    rounded-full 
-    relative 
-    overflow-hidden 
-    transform transition-all duration-300 
-    hover:scale-[1.02]
-    active:translate-y-1
-    shadow-xl
-    hover:shadow-2xl
-    before:absolute 
-    before:inset-0 
-    before:bg-white 
-    before:opacity-0 
-    before:transition-opacity 
-    hover:before:opacity-10
-    threed-button
-  ">
-    <span className="relative z-10">Join Our Network</span>
-  </button>
-</div>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+              <a
+                href="https://rnd.iiti.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+      w-full sm:w-auto 
+      px-6 py-3 
+      bg-opacity-30 backdrop-blur-md bg-[#0a192f] shadow-lg
+      rounded-full 
+      text-white 
+      relative 
+      overflow-hidden 
+      transform transition-all duration-300 
+      hover:scale-[1.02]
+      active:translate-y-1
+      shadow-xl
+      hover:shadow-2xl
+      before:absolute 
+      before:inset-0 
+      before:bg-white 
+      before:opacity-0 
+      before:transition-opacity 
+      hover:before:opacity-10
+      3d-button
+    "
+              >
+                <span className="relative z-10">Explore Research</span>
+              </a>
+
+              {/* Join Our Network Button */}
+              <a
+                href="https://www.instagram.com/ric.iiti/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  w-full sm:w-auto 
+                  px-6 py-3 
+                  border border-blue-300 
+                  text-blue-300 
+                  rounded-full 
+                  relative 
+                  overflow-hidden 
+                  transform transition-all duration-300 
+                  hover:scale-[1.02]
+                  active:translate-y-1
+                  shadow-xl
+                  hover:shadow-2xl
+                  before:absolute 
+                  before:inset-0 
+                  before:bg-white 
+                  before:opacity-0 
+                  before:transition-opacity 
+                  hover:before:opacity-10
+                  threed-button
+                "
+                onClick={() => navigate('/network')}
+              >
+                <span className="relative z-10">Join Our Network</span>
+              </a>
+            </div>
 
           </div>
         </div>

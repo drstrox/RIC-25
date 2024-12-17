@@ -7,51 +7,51 @@ const MerchPage = () => {
   const merchItems = [
     {
       id: 'hoodie-01',
-      name: 'RIC Gradient Hoodie',
+      name: 'Signature Windcheater',
       description: 'Embrace innovation with our signature gradient design',
-      price: 45.99,
-      originalPrice: 59.99,
-      image: '/api/placeholder/400/500',
+      price: 700,
+      originalPrice: 750,
+      image: '/merch/edge of brilliance_page-0001.jpg',
       colors: ['Navy', 'Black', 'Deep Blue'],
       sizes: ['S', 'M', 'L', 'XL']
     },
     {
       id: 'tshirt-01',
-      name: 'Techno Research Tee',
+      name: 'Signature Windcheater',
       description: 'Abstract circuitry meets cutting-edge design',
-      price: 29.99,
-      originalPrice: 39.99,
-      image: '/api/placeholder/400/500',
+      price: 700,
+      originalPrice: 750,
+      image: '/merch/elevate every step_page-0001.jpg',
       colors: ['Charcoal', 'White', 'Dark Teal'],
       sizes: ['XS', 'S', 'M', 'L', 'XL']
     },
     {
       id: 'cap-01',
-      name: 'Innovation Snapback',
+      name: 'Think Beyond Merch',
       description: 'Sleek cap with embroidered RIC logo',
-      price: 24.99,
-      originalPrice: 34.99,
-      image: '/api/placeholder/400/500',
+      price: 300,
+      originalPrice: 350,
+      image: '/merch/black_page-0001.jpg',
       colors: ['Black', 'Navy', 'Graphite'],
       sizes: ['Adjustable']
     },
     {
       id: 'jacket-01',
-      name: 'Tech Pioneer Windbreaker',
+      name: 'Windbreaker Merch',
       description: 'Lightweight, water-resistant research gear',
-      price: 79.99,
-      originalPrice: 99.99,
-      image: '/api/placeholder/400/500',
+      price: 300,
+      originalPrice: 350,
+      image: '/merch/beige_page-0001.jpg',
       colors: ['Dark Blue', 'Midnight Black'],
       sizes: ['S', 'M', 'L', 'XL']
     },
     {
       id: 'laptop-sleeve-01',
-      name: 'Digital Research Sleeve',
+      name: 'RIC Elevate Merch',
       description: 'Premium protection with geometric tech print',
-      price: 34.99,
-      originalPrice: 44.99,
-      image: '/api/placeholder/400/500',
+      price: 300,
+      originalPrice: 350,
+      image: '/merch/brown_page-0001.jpg',
       colors: ['Navy Blue', 'Black'],
       sizes: ['13"', '15"', '16"']
     }
@@ -66,6 +66,8 @@ const MerchPage = () => {
       return newFavorites;
     });
   };
+
+  const orderFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSeD4cHTxcAS44cZDf-cdXjVvW8rpK4b2en4yFNDxF_w3KGn9g/viewform";
 
   return (
     <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen py-12">
@@ -133,11 +135,14 @@ const MerchPage = () => {
                 
                 <div className="flex justify-between items-center">
                   <div>
-                    <span className="text-2xl font-bold text-blue-300">${item.price}</span>
-                    <span className="ml-2 text-sm line-through text-gray-500">${item.originalPrice}</span>
+                    <span className="text-2xl font-bold text-blue-300">{item.price}</span>
+                    <span className="ml-2 text-sm line-through text-gray-500">{item.originalPrice}</span>
                   </div>
                   
-                  <button 
+                  <a 
+                    href={orderFormLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className="
                       bg-blue-600/30 
                       text-blue-300 
@@ -153,7 +158,7 @@ const MerchPage = () => {
                   >
                     <ShoppingCart className="w-5 h-5" />
                     <span>Buy Now</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -161,7 +166,10 @@ const MerchPage = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button 
+          <a 
+            href={orderFormLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="
               px-8 py-4 
               bg-blue-600/30 
@@ -177,7 +185,7 @@ const MerchPage = () => {
             "
           >
             Order Custom Merchandise
-          </button>
+          </a>
         </div>
       </div>
     </div>
