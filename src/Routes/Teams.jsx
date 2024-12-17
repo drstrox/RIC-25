@@ -1,101 +1,193 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './Teams.css';
 
-const Team = ({ teamName, headImg, headName, headSocials, members }) => {
+const PositionCard = ({ name, title, description, image, socials }) => {
   return (
-    <div className="team-card-professional">
-      <div className="team-head-section">
-        <div className="team-title">{teamName}</div>
-        <div className="team-head-content">
-          <div className="team-row">
-            {/* Team Head Image wrapped with "HEAD" tag */}
-            <div className="team-head-tag">
-              <div className="team-head-image-container">
-                <img
-                  src={headImg}
-                  alt={`${teamName} Head`}
-                  className="team-head-image"
-                />
-                {headSocials && (
-                  <div className="team-head-social-icons">
-                    {headSocials.linkedin && (
-                      <a 
-                        href={headSocials.linkedin} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                      >
-                        <FaLinkedin />
-                      </a>
-                    )}
-                    {headSocials.instagram && (
-                      <a 
-                        href={headSocials.instagram} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                      >
-                        <FaInstagram />
-                      </a>
-                    )}
-                  </div>
-                )}
-              </div>
-              <p className="team-head-name">{headName}</p>
-            </div>
-
-            {/* Team Members */}
-            <div className="team-members-row">
-              {members.map((member, index) => (
-                <div key={index} className="member-card">
-                  <div className="member-image-container">
-                    <img
-                      src={member.imgSrc}
-                      alt={member.name}
-                      className="member-image"
-                    />
-                    {member.socials && (
-                      <div className="member-social-icons">
-                        {member.socials.linkedin && (
-                          <a 
-                            href={member.socials.linkedin} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="social-icon"
-                          >
-                            <FaLinkedin />
-                          </a>
-                        )}
-                        {member.socials.instagram && (
-                          <a 
-                            href={member.socials.instagram} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="social-icon"
-                          >
-                            <FaInstagram />
-                          </a>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                  <p className="member-name">{member.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+    <div className="position-card">
+      <div className="position-image-container">
+        <img 
+          src={image} 
+          alt={name} 
+          className="position-image"
+        />
+        <div className="position-social-overlay">
+          {socials.linkedin && (
+            <a 
+              href={socials.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaLinkedin />
+            </a>
+          )}
+          {socials.instagram && (
+            <a 
+              href={socials.instagram} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaInstagram />
+            </a>
+          )}
         </div>
+      </div>
+      <div className="position-info">
+        <h3 className="position-title">{title}</h3>
+        <p className="position-name">{name}</p>
+        <p className="position-description">{description}</p>
       </div>
     </div>
   );
 };
 
+const KeyPositions = () => {
+  const positions = [
+    {
+      name: 'Rithvik',
+      title: 'General Secretary Academics',
+      description: 'Leading the academic affairs for the students, ensuring a smooth academic journey.',
+      image: '/team_members/Rithvik.jpg',
+      socials: {
+        linkedin: 'https://www.linkedin.com/in/rithvik-gs-acads',
+        instagram: 'https://www.instagram.com/rithvik_gs_acads'
+      }
+    },
+    {
+      name: 'Mohit Tiwari',
+      title: 'Overall Coordinator (PG)',
+      description: 'Oversee the postgraduate students and represent their academic interests in all forums.',
+      image: '/team_members/Mohit Tiwari.jpg',
+      socials: {
+        linkedin: 'https://www.linkedin.com/in/mohit-tiwari-oc-pg',
+        instagram: 'https://www.instagram.com/mohit_tiwari_oc_pg'
+      }
+    },
+    {
+      name: 'Keerthan Pragnay',
+      title: 'Overall Coordinator (UG)',
+      description: 'Represent undergraduate students, manage their queries, and act as a bridge between them and administration.',
+      image: '/team_members/Keerthan Pragnay.jpg',
+      socials: {
+        linkedin: 'https://www.linkedin.com/in/keerthan-pragnay-a4368b289',
+        instagram: 'https://www.instagram.com/k1728__/profilecard/'
+      }
+    }
+  ];
+
+  return (
+    <div className="key-positions-section">
+      <h2 className="key-positions-title">Key Leadership Positions</h2>
+      <div className="key-positions-grid">
+        {positions.map((position, index) => (
+          <PositionCard 
+            key={index}
+            name={position.name}
+            title={position.title}
+            description={position.description}
+            image={position.image}
+            socials={position.socials}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Rest of the Teams component remains the same as in the previous implementation
+
+
+const TeamMember = ({ member, isHead = false }) => {
+  return (
+    <div 
+      className={`
+        team-member-card 
+        ${isHead ? 'team-head-card' : 'team-regular-card'}
+      `}
+    >
+      <div className="member-image-container">
+        <img 
+          src={member.imgSrc} 
+          alt={member.name} 
+          className="member-image"
+        />
+        {member.socials && (
+          <div className="member-social-overlay">
+            {member.socials.linkedin && (
+              <a 
+                href={member.socials.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <FaLinkedin />
+              </a>
+            )}
+            {member.socials.instagram && (
+              <a 
+                href={member.socials.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <FaInstagram />
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+      <div className="member-info">
+        <h3 className={`member-name ${isHead ? 'head-name' : ''}`}>
+          {member.name}
+        </h3>
+        {isHead && <p className="head-tag">Domain Head</p>}
+      </div>
+    </div>
+  );
+};
+
+const TeamSection = ({ team, year }) => {
+  const hasHead = team.headImg && team.headName;
+  
+  return (
+    <div className="team-section-card">
+      <h2 className="team-section-title">{team.teamName}</h2>
+      
+      <div className="team-members-grid">
+        {hasHead && (
+          <TeamMember 
+            member={{
+              imgSrc: team.headImg,
+              name: team.headName,
+              socials: team.headSocials
+            }} 
+            isHead={true}
+          />
+        )}
+        
+        {team.members.map((member, index) => (
+          <TeamMember 
+            key={index} 
+            member={member} 
+            isHead={false}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
 const Teams = () => {
-  const teamsData = [
+  const [selectedYear, setSelectedYear] = useState(2024);
+
+  // ... (previous teamsData2024 and teamsData2023 remain the same)
+  const teamsData2024 = [
     {
       teamName: 'Web Design',
-      headImg: '/team_members/Aayush Yadav.jpg',
+      headImg: '/team_members/Aayush Yadav.png',
       headName: 'Aayush Yadav',
       headSocials: {
         linkedin: 'https://www.linkedin.com/in/aayush-yadav-7a0b40282/',
@@ -378,8 +470,15 @@ const Teams = () => {
         { imgSrc: '/team_members/Dodiya Monik Dilipbhai.jpg', 
           name: 'Monik',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'https://www.instagram.com/monikdodiyaa/?hl=en',
+            instagram: 'https://www.instagram.com/monikdodiyaa/?hl=en',
+          }
+         },
+         { imgSrc: '/team_members/prayg.jpg', 
+          name: 'Prayag Lakhani',
+          socials: {
+            linkedin: 'https://www.linkedin.com/in/prayag-lakhani-58ab43289/',
+            instagram: 'https://www.instagram.com/prayag.lakhani/profilecard/?igsh=eXU5ZGNqcnlhcDZi',
           }
          },
         { imgSrc: '/team_members/Banoth Rohith.jpeg',
@@ -391,140 +490,47 @@ const Teams = () => {
         }
       ]
     }
-    
+  ];
+
+  const teamsData2023 = [
+    // Add 2023 teams data if available
   ];
 
   return (
-    
-    <section className="teams-section">
-      <div className="container">
-        
-      {/* Key Positions Section */}
-<div className="positions-section">
-    <h2 className="positions-title">Our Key Positions</h2>
-    <div className="positions-grid">
-        {/* GS Acads Card */}
-        <div className="position-card">
-            <div className="position-image-container">
-                <img 
-                    className="position-image" 
-                    src="/team_members/Rithvik.jpg" 
-                    alt="GS Acads" 
-                />
-                <div className="position-social-icons">
-                    <a 
-                        href="https://www.linkedin.com/in/rithvik-gs-acads" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaLinkedin />
-                    </a>
-                    <a 
-                        href="https://www.instagram.com/rithvik_gs_acads" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaInstagram />
-                    </a>
-                    
-                </div>
-            </div>
-            <h3 className="position-title">General Secretary Academics</h3>
-            <p className="position-name">Rithvik</p> 
-            <p className="position-description">
-                Leading the academic affairs for the students, ensuring a smooth academic journey.
-            </p>
+    <div className="teams-page">
+      <div className="teams-container">
+        <div className="teams-header">
+          <h1 className="page-title">Our Teams</h1>
+          <div className="year-selector">
+            <button
+              onClick={() => setSelectedYear(2024)}
+              className={`year-btn ${selectedYear === 2024 ? 'active' : ''}`}
+            >
+              2024
+            </button>
+            <button
+              onClick={() => setSelectedYear(2023)}
+              className={`year-btn ${selectedYear === 2023 ? 'active' : ''}`}
+            >
+              2023
+            </button>
+          </div>
         </div>
 
-        {/* OC-PG Card */}
-        <div className="position-card">
-            <div className="position-image-container">
-                <img 
-                    className="position-image" 
-                    src="/team_members/Mohit Tiwari.jpg" 
-                    alt="OC-PG" 
-                />
-                <div className="position-social-icons">
-                    <a 
-                        href="https://www.linkedin.com/in/mohit-tiwari-oc-pg" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaLinkedin />
-                    </a>
-                    <a 
-                        href="https://www.instagram.com/mohit_tiwari_oc_pg" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaInstagram />
-                    </a>
-                   
-                </div>
-            </div>
-            <h3 className="position-title">Overall Co-ordinator (PG)</h3>
-            <p className="position-name">Mohit Tiwari</p> 
-            <p className="position-description">
-                Oversee the postgraduate students and represent their academic interests in all forums.
-            </p>
-        </div>
+        {/* New Key Positions Section */}
+        <KeyPositions />
 
-        {/* OC-UG Card */}
-        <div className="position-card">
-            <div className="position-image-container">
-                <img 
-                    className="position-image" 
-                    src="/team_members/Keerthan Pragnay.jpg" 
-                    alt="OC-UG" 
-                />
-                <div className="position-social-icons">
-                    <a 
-                        href="https://www.linkedin.com/in/keerthan-pragnay-a4368b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaLinkedin />
-                    </a>
-                    <a 
-                        href="https://www.instagram.com/k1728__/profilecard/?igsh=N2R2MTdyNXVrYjht" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="social-icon"
-                    >
-                        <FaInstagram />
-                    </a>
-                   
-                </div>
-            </div>
-            <h3 className="position-title">Overall Co-ordinator (UG)</h3>
-            <p className="position-name">Keerthan Pragnay</p> 
-            <p className="position-description">
-                Represent undergraduate students, manage their queries, and act as a bridge between them and administration.
-            </p>
-        </div>
-    </div>
-</div>
-
-        <h2 className="teams-title">Our Teams</h2>
         <div className="teams-grid">
-          {teamsData.map((team, index) => (
-            <Team
-              key={index}
-              teamName={team.teamName}
-              headImg={team.headImg}
-              headName={team.headName}
-              headSocials={team.headSocials}
-              members={team.members}
+          {(selectedYear === 2024 ? teamsData2024 : teamsData2023).map((team, index) => (
+            <TeamSection 
+              key={index} 
+              team={team} 
+              year={selectedYear} 
             />
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
