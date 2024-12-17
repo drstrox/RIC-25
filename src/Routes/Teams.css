@@ -210,8 +210,8 @@
   
   .key-positions-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     justify-content: center;
   }
   
@@ -299,10 +299,17 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  @media (max-width: 1200px) {
+    .key-positions-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
   
   @media (max-width: 768px) {
     .key-positions-grid {
       grid-template-columns: 1fr;
+      gap:2rem;
     }
   
     .key-positions-title {
