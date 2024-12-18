@@ -316,3 +316,7 @@
       font-size: 2rem;
     }
   }
+
+  .team-section-card.few-members .team-members-grid {
+    justify-content: center;
+  }

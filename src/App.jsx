@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { IconNameNavbar } from './Routes/Nav';
-import { ArrowRight } from 'react-feather'; // Assuming you're using `react-feather` for icons
+import { ArrowRight } from 'react-feather'; 
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
@@ -17,7 +17,6 @@ function App() {
 
       <IconNameNavbar />
 
-      {/* Main content and routes */}
       <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -31,10 +30,7 @@ function App() {
       </Routes>
       </div>
 
-
-
       <Footer />
-
     </Router>
   );
 }

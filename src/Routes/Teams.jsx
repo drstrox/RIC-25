@@ -204,9 +204,10 @@ const TeamMember = ({ member, isHead = false }) => {
 
 const TeamSection = ({ team, year }) => {
   const hasHead = team.headImg && team.headName;
+  const hasCoHead = team.coHeadImg && team.coHeadName;
 
   return (
-    <div className="team-section-card">
+    <div className={`team-section-card ${team.members.length < 4 ? 'few-members' : ''}`}>
       <h2 className="team-section-title">{team.teamName}</h2>
 
       <div className="team-members-grid">
@@ -216,6 +217,16 @@ const TeamSection = ({ team, year }) => {
               imgSrc: team.headImg,
               name: team.headName,
               socials: team.headSocials
+            }}
+            isHead={true}
+          />
+        )}
+        {hasCoHead && (
+          <TeamMember
+            member={{
+              imgSrc: team.coHeadImg,
+              name: team.coHeadName,
+              socials: team.coHeadSocials
             }}
             isHead={true}
           />
@@ -271,6 +282,7 @@ const Teams = () => {
             instagram: 'https://www.instagram.com/chandrahasa_206',
           }
         },
+
       ]
     },
     {
@@ -348,15 +360,13 @@ const Teams = () => {
         linkedin: 'https://www.linkedin.com/in/praneeth-chitrapu',
         instagram: 'https://www.instagram.com/praneethchitrapu',
       },
+      coHeadImg: '/team_members/Aman Choudhary.jpg',
+      coHeadName: 'Aman Choudhary',
+      coHeadSocials: {
+        linkedin: 'https://www.linkedin.com/in/aman-choudhary-954833292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/_aman.chou_/profilecard/?igsh=MXVxdjV2ZGsxZW9kdA==',
+      },
       members: [
-        {
-          imgSrc: '/team_members/Aman Choudhary.jpg',
-          name: 'Aman Choudhary',
-          socials: {
-            linkedin: 'https://www.linkedin.com/in/aman-choudhary-954833292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            instagram: 'https://www.instagram.com/_aman.chou_/profilecard/?igsh=MXVxdjV2ZGsxZW9kdA==',
-          }
-        },
         {
           imgSrc: '/team_members/Aniket Goyal.jpg',
           name: 'Aniket Goyal',
@@ -444,6 +454,13 @@ const Teams = () => {
         linkedin: 'https://www.linkedin.com/in/aditi-luniya',
         instagram: 'https://www.instagram.com/aditi_luniya',
       },
+      coHeadImg: '/team_members/Akash Kumar Singh.jpg',
+      coHeadName: 'Akash Singh',
+      coHeadSocials: {
+        linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
+        instagram: 'https://www.instagram.com/vanshika_gupta',
+
+      },
       members: [
         {
           imgSrc: '/team_members/Vanshika Gupta.jpeg',
@@ -488,14 +505,6 @@ const Teams = () => {
         {
           imgSrc: '/team_members/Arnav Verma.jpg',
           name: 'Arnav Verma',
-          socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
-          }
-        },
-        {
-          imgSrc: '/team_members/Akash Kumar Singh.jpg',
-          name: 'Akash Kumar Singh',
           socials: {
             linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
             instagram: 'https://www.instagram.com/vanshika_gupta',
@@ -716,7 +725,7 @@ const Teams = () => {
             instagram: 'https://www.instagram.com/_rohith_017/profilecard/?igsh=ZDQ1MGRiY2lrbmly',
           }
         },
-        
+
       ]
     },
     {

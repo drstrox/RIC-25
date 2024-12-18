@@ -83,7 +83,7 @@ const MerchPage = () => {
           {/* Countdown Banner */}
           <div className="bg-blue-900/30 backdrop-blur-md rounded-lg p-4 mt-6 max-w-md mx-auto">
             <div className="flex justify-between items-center">
-              <span className="text-xl font-semibold">Holiday Special Ends:</span>
+              <span className="text-xl font-semibold">Priority Wave Sale Ends:</span>
               <div className="text-lg font-bold text-blue-300">
                 25th December, 2024
               </div>
