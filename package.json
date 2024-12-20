@@ -23,7 +23,8 @@
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.13.1",
     "react-router-dom": "^7.0.2",
-    "vue": "^3.5.1"
+    "vue": "^3.5.1",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

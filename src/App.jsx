@@ -168,51 +168,6 @@ const HomePage = () => {
         {/* Mobile Background Overlay */}
         <div className="absolute inset-0 bg-black/40 md:hidden z-5"></div>
       </div>
-
-      {/* Cards Section */}
-      <Cards />
-
-      {/* Company Logos Carousel */}
-      <div className="carousel-wrapper mx-auto mt-12">
-        <div className="carousel">
-          {["apple", "google", "amazon", "microsoft", "facebook", "netflix", "tesla", "nike", "adidas", "coca-cola"].map((company, idx) => (
-            <div className="item" key={company}>
-              <img
-                src={`https://logo.clearbit.com/${company}.com`}
-                alt={`${company.charAt(0).toUpperCase() + company.slice(1)} logo - Partner`}
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Animation Styles */}
-      <style jsx>{`
-        .animate-line-draw {
-          position: relative;
-          overflow: hidden;
-          white-space: nowrap;
-          display: inline-block;
-          animation: line-draw 2s forwards;
-        }
-
-        @keyframes line-draw {
-          from {
-            clip-path: inset(0 100% 0 0);
-          }
-          to {
-            clip-path: inset(0 0 0 0);
-          }
-        }
-
-        /* Fallback for browsers that don't support clip-path */
-        @supports not (clip-path: inset(0 0 0 0)) {
-          .animate-line-draw {
-            visibility: visible;
-          }
-        }
-      `}</style>
     </div>
   );
 };

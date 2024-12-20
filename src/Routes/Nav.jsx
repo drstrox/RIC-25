@@ -16,7 +16,7 @@ const IconNameNavbar = () => {
     { name: 'Merch', path: '/merch', key: 'merch' },
     { 
       name: 'Brochure', 
-      path: 'https://drive.google.com/file/d/12G04v_wV-RKuse0c1Q9Yjy412d2b3E6J/view?usp=sharing', 
+      path: 'https://drive.google.com/file/d/1p-mQA-5x3pxThtmdamCEymI8ixn04KeS/view?usp=sharing', 
       key: 'calendar', 
       isDownload: true 
     },

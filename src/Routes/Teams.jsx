@@ -330,7 +330,7 @@ const Teams = () => {
           imgSrc: '/team_members/Pratul Pan.jpg',
           name: 'Pratul Pan',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/chandrahasa-rachakonda-3201a92a6',
+            linkedin: 'http://www.linkedin.com/in/pratul-pan-156090338',
             instagram: 'https://www.instagram.com/pratulpan/?__pwa=1',
           }
         },
@@ -457,7 +457,7 @@ const Teams = () => {
       coHeadImg: '/team_members/Akash Kumar Singh.jpg',
       coHeadName: 'Akash Singh',
       coHeadSocials: {
-        linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
+        linkedin: 'https://www.linkedin.com/in/akashsingh68/',
         instagram: 'https://www.instagram.com/vanshika_gupta',
 
       },
@@ -466,8 +466,8 @@ const Teams = () => {
           imgSrc: '/team_members/Vanshika Gupta.jpeg',
           name: 'Vanshika Gupta',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'https://www.linkedin.com/in/vanshika-gupta-836006321',
+            instagram: 'https://www.instagram.com/iitz_vanshika',
           }
         },
         {
@@ -533,8 +533,8 @@ const Teams = () => {
           imgSrc: '/team_members/Kanakam Abhishek.jpg',
           name: 'Kanakam Abhishek',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'https://www.linkedin.com/in/abhishek-kanakam-83b649338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/bunny._.1224/profilecard/?igsh=MXRqa2I2cHZqcTJ4dw==',
           }
         },
         {
