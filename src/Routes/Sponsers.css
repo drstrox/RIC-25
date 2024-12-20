@@ -1,0 +1,122 @@
+.sponsers-container {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dark Blue Gradient Background */
+  padding: 40px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  grid-template-rows: auto auto; /* Two rows for sponsors */
+  gap: 20px;
+}
+
+/* Title Sponsor box */
+.title-box {
+  grid-column: 1 / 2; /* Occupy the left column */
+  grid-row: 1 / 3; /* Span over both rows */
+  border: 4px solid #f08929;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Platinum and Silver Sponsors */
+.platinum-box {
+  grid-column: 2 / 3; /* Occupy the middle column */
+  grid-row: 1 / 2; /* First row */
+  border: 4px solid #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.silver-box {
+  grid-column: 2 / 3; /* Occupy the middle column */
+  grid-row: 2 / 3; /* Second row */
+  border: 4px solid #c1e1d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Gold and Bronze Sponsors */
+.gold-box {
+  grid-column: 3 / 4; /* Occupy the right column */
+  grid-row: 1 / 2; /* First row */
+  border: 4px solid #f0b429;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bronze-box {
+  grid-column: 3 / 4; /* Occupy the right column */
+  grid-row: 2 / 3; /* Second row */
+  border: 4px solid #714a1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Common styles for all sponsor cards */
+.sponsor-card {
+  background-color: #002147; /* Dark blue */
+  /* border: 4px solid #f0b429; Gold outline */
+  border-radius: 15px;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  text-align: left;
+  height: 100%;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sponsor-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.sponsor-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sponsor-card li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.sponsor-card li::before {
+  content: "•";
+  color: #0073e6;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    grid-template-rows: auto; /* Adjust height */
+  }
+  .title-box {
+    grid-row: auto; /* Adjusts to content */
+  }
+}

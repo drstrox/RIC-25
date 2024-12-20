@@ -13,6 +13,7 @@ const IconNameNavbar = () => {
     { name: 'Events', path: '/events', key: 'events' },
     { name: 'Team', path: '/team', key: 'team' },
     { name: 'Gallery', path: '/gallery', key: 'gallery' },
+    { name: 'Sponsers', path: '/sponsers', key: 'sponsers'},
     { name: 'Merch', path: '/merch', key: 'merch' },
     { 
       name: 'Brochure', 

@@ -7,8 +7,10 @@ import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
 import { Events } from './Routes/Events';
+import Sponsers from './Routes/Sponsers';
 import Teams from './Routes/Teams';
 import MerchPage from './Routes/Merch';
+
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/merch" element={<MerchPage />} />
+        <Route path="/sponsers" element={<Sponsers />} />
       </Routes>
       </div>
 
