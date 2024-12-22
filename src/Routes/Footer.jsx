@@ -56,7 +56,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhone className="text-blue-400 shrink-0" />
-                <span className="text-gray-300">+91 99591 31509</span>
+                <span className="text-gray-300">+91 88853 33459</span>
               </div>
             </div>
           </div>
@@ -65,23 +65,6 @@ const Footer = () => {
           <div>
             <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">Overall Co-ordinators (OC)</h4>
             <div className="space-y-4 text-sm sm:text-base text-gray-300">
-              <div>
-                <h5 className="font-bold text-white">Mohit Tiwari</h5>
-                <p className="text-gray-300">Position: OC-PG</p>
-                <div className="flex items-center space-x-3">
-                  <FaEnvelope className="text-blue-400 shrink-0" />
-                  <a 
-                    href="mailto:ocpg@iitindore.ac.in" 
-                    className="text-gray-300 hover:text-white transition-colors truncate"
-                  >
-                    mt2302105020@iiti.ac.in
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <FaPhone className="text-blue-400 shrink-0" />
-                  <span className="text-gray-300">+91 76949 54133</span>
-                </div>
-              </div>
               <div>
                 <h5 className="font-bold text-white">Keerthan Pragnay</h5>
                 <p className="text-gray-300">Position: OC-UG</p>
@@ -97,6 +80,23 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <FaPhone className="text-blue-400 shrink-0" />
                   <span className="text-gray-300">+91 88853 33459</span>
+                </div>
+              </div>
+              <div>
+                <h5 className="font-bold text-white">Mohit Tiwari</h5>
+                <p className="text-gray-300">Position: OC-PG</p>
+                <div className="flex items-center space-x-3">
+                  <FaEnvelope className="text-blue-400 shrink-0" />
+                  <a 
+                    href="mailto:ocpg@iitindore.ac.in" 
+                    className="text-gray-300 hover:text-white transition-colors truncate"
+                  >
+                    mt2302105020@iiti.ac.in
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FaPhone className="text-blue-400 shrink-0" />
+                  <span className="text-gray-300">+91 76949 54133</span>
                 </div>
               </div>
             </div>

@@ -463,6 +463,14 @@ const Teams = () => {
       },
       members: [
         {
+          imgSrc: '/team_members/Kumar Subham.webp',
+          name: 'Kumar Subham Barik',
+          socials: {
+            linkedin: 'https://www.linkedin.com/in/kumar-subham-barik-b24733281/',
+            instagram: 'https://www.instagram.com/kumarsubhambarik/',
+          }
+        },
+        {
           imgSrc: '/team_members/Vanshika Gupta.jpeg',
           name: 'Vanshika Gupta',
           socials: {
@@ -482,16 +490,8 @@ const Teams = () => {
           imgSrc: '/team_members/Sohil Dangi.jpg',
           name: 'Sohil Dangi ',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
-          }
-        },
-        {
-          imgSrc: '/team_members/Kumar Subham.webp',
-          name: 'Kumar Subham Barik',
-          socials: {
-            linkedin: 'https://www.linkedin.com/in/kumar-subham-barik-b24733281/',
-            instagram: 'https://www.instagram.com/kumarsubhambarik/',
+            linkedin: 'https://www.linkedin.com/in/sohil-dangi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/sohil.thakur11/profilecard/?igsh=MWlrdDhnajhnNmI2eA==',
           }
         },
         {
@@ -530,14 +530,6 @@ const Teams = () => {
           }
         },
         {
-          imgSrc: '/team_members/Kanakam Abhishek.jpg',
-          name: 'Kanakam Abhishek',
-          socials: {
-            linkedin: 'https://www.linkedin.com/in/abhishek-kanakam-83b649338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            instagram: 'https://www.instagram.com/bunny._.1224/profilecard/?igsh=MXRqa2I2cHZqcTJ4dw==',
-          }
-        },
-        {
           imgSrc: '/team_members/Dodiya Monik Dilipbhai.jpg',
           name: 'Monik',
           socials: {
@@ -551,6 +543,14 @@ const Teams = () => {
           socials: {
             linkedin: 'https://www.linkedin.com/in/prayag-lakhani-58ab43289/',
             instagram: 'https://www.instagram.com/prayag.lakhani/profilecard/?igsh=eXU5ZGNqcnlhcDZi',
+          }
+        },
+        {
+          imgSrc: '/team_members/Kanakam Abhishek.jpg',
+          name: 'Kanakam Abhishek',
+          socials: {
+            linkedin: 'https://www.linkedin.com/in/abhishek-kanakam-83b649338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/bunny._.1224/profilecard/?igsh=MXRqa2I2cHZqcTJ4dw==',
           }
         },
         {
