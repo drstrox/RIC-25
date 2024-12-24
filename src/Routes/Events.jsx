@@ -9,22 +9,22 @@ const eventsData = [
   },
   {
     title: "3 MINUTE THESIS",
-    image: "https://via.placeholder.com/400",
+    image: "event/3MinuteThesis.jpg",
     description: "3 Minute Thesis (3MT) is a dynamic competition where researchers present their work in just three minutes. The challenge is to explain complex ideas in a clear, engaging way using only one static slide. It's a great opportunity to showcase research diversity and refine communication skills.",
   },
   {
     title: "BTP Showcase",
-    image: "event/project.jpg",
+    image: "event/BTP.jpg",
     description: "The B.Tech Project (BTP) is a platform for final-year students to showcase the skills and knowledge they've developed during their undergraduate journey. It allows students to dive deep into their chosen fields, tackling real-world problems and exploring innovative solutions.",
   },
   {
     title: "PROJECT SHOWCASE",
-    image: "https://via.placeholder.com/400",
+    image: "event/project.jpg",
     description: "Project Showcase is an event where students and professionals present their innovative projects, demonstrating creativity and technical skills. It's an opportunity to share solutions to real-world challenges, highlight hands-on learning, and inspire others.",
   },
   {
     title: "SCIENTIFIC QUIZ",
-    image: "https://via.placeholder.com/400",
+    image: "event/ScientificQuiz.jpg",
     description: "Scientific Quiz is a fun and engaging event that challenges participants to test their knowledge across a wide range of scientific topics. By joining, you not only get to compete in an intellectually stimulating environment but also enhance your understanding of science.",
   },
   {
@@ -34,12 +34,12 @@ const eventsData = [
   },
   {
     title: "POSTER, MODEL, ORAL PRESENTATION",
-    image: "https://via.placeholder.com/400",
+    image: "event/POMP.jpg",
     description: "An exciting event featuring a dynamic combination of Poster, Model, and Oral Presentations. Students will design eye-catching posters, build intricate models, and present their work to a panel of judges and peers.",
   },
   {
     title: "MODEL EXHIBITION FOR SCHOOLS",
-    image: "https://via.placeholder.com/400",
+    image: "event/ModelExhibition.jpg",
     description: "A Model Exhibition where young minds can showcase their creativity and innovation. This event will feature a wide variety of student-built models, ranging from scientific inventions to architectural designs.",
   },
 ];
