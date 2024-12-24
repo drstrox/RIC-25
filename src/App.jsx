@@ -2,34 +2,35 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { IconNameNavbar } from './Routes/Nav';
-import { ArrowRight } from 'react-feather'; // Assuming you're using `react-feather` for icons
+import { ArrowRight } from 'react-feather'; 
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
 import { Teams } from './Routes/Teams';
-import CountdownTimer from './Routes/CountdownTimer';
 
 function App() {
   return (
     <Router>
-     
+
       <IconNameNavbar />
       
       <CountdownTimer targetDate={"2025-01-15T00:00:00"}/>
 
-      {/* Main content and routes */}
+      <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/team" element={<Teams />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/merch" element={<MerchPage />} />
+        <Route path="/sponsers" element={<Sponsers />} />
       </Routes>
-       
- 
-       <Footer/>
-      
+      </div>
+
+      <Footer />
     </Router>
   );
 }
@@ -38,10 +39,6 @@ export default App;
 
 // HomePage Component
 import { useEffect, useState, useRef } from 'react';
-
-
-
-
 
 const HomePage = () => {
   const [visibleProjects, setVisibleProjects] = useState(new Set());
@@ -85,7 +82,7 @@ const HomePage = () => {
             {/* Responsive Text Sizing */}
             <div className="overflow-hidden">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text animate-line-draw">
-                Research 
+                Research
               </h1>
             </div>
             <div className="overflow-hidden">
@@ -103,57 +100,68 @@ const HomePage = () => {
               Pioneering interdisciplinary research and bridging the gap between
               academic innovation and industrial implementation at IIT Indore.
             </p>
-            
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-  <button className="
-    w-full sm:w-auto 
-    px-6 py-3 
-    bg-opacity-30 backdrop-blur-md bg-[#0a192f] shadow-lg
-    rounded-full 
-    text-white 
-    relative 
-    overflow-hidden 
-    transform transition-all duration-300 
-    hover:scale-[1.02]
-    active:translate-y-1
-    shadow-xl
-    hover:shadow-2xl
-    before:absolute 
-    before:inset-0 
-    before:bg-white 
-    before:opacity-0 
-    before:transition-opacity 
-    hover:before:opacity-10
-    3d-button
 
-  ">
-    <span className="relative z-10">Explore Research</span>
-  </button>
-  
-  <button className="
-    w-full sm:w-auto 
-    px-6 py-3 
-    border border-blue-300 
-    text-blue-300 
-    rounded-full 
-    relative 
-    overflow-hidden 
-    transform transition-all duration-300 
-    hover:scale-[1.02]
-    active:translate-y-1
-    shadow-xl
-    hover:shadow-2xl
-    before:absolute 
-    before:inset-0 
-    before:bg-white 
-    before:opacity-0 
-    before:transition-opacity 
-    hover:before:opacity-10
-    threed-button
-  ">
-    <span className="relative z-10">Join Our Network</span>
-  </button>
-</div>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+              <a
+                href="https://rnd.iiti.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+      w-full sm:w-auto 
+      px-6 py-3 
+      bg-opacity-30 backdrop-blur-md bg-[#0a192f] shadow-lg
+      rounded-full 
+      text-white 
+      relative 
+      overflow-hidden 
+      transform transition-all duration-300 
+      hover:scale-[1.02]
+      active:translate-y-1
+      shadow-xl
+      hover:shadow-2xl
+      before:absolute 
+      before:inset-0 
+      before:bg-white 
+      before:opacity-0 
+      before:transition-opacity 
+      hover:before:opacity-10
+      3d-button
+    "
+              >
+                <span className="relative z-10">Explore Research</span>
+              </a>
+
+              {/* Join Our Network Button */}
+              <a
+                href="https://www.instagram.com/ric.iiti/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  w-full sm:w-auto 
+                  px-6 py-3 
+                  border border-blue-300 
+                  text-blue-300 
+                  rounded-full 
+                  relative 
+                  overflow-hidden 
+                  transform transition-all duration-300 
+                  hover:scale-[1.02]
+                  active:translate-y-1
+                  shadow-xl
+                  hover:shadow-2xl
+                  before:absolute 
+                  before:inset-0 
+                  before:bg-white 
+                  before:opacity-0 
+                  before:transition-opacity 
+                  hover:before:opacity-10
+                  threed-button
+                "
+                onClick={() => navigate('/network')}
+              >
+                <span className="relative z-10">Join Our Network</span>
+              </a>
+            </div>
 
           </div>
         </div>
@@ -161,51 +169,6 @@ const HomePage = () => {
         {/* Mobile Background Overlay */}
         <div className="absolute inset-0 bg-black/40 md:hidden z-5"></div>
       </div>
-
-      {/* Cards Section */}
-      <Cards />
-
-      {/* Company Logos Carousel */}
-      <div className="carousel-wrapper mx-auto mt-12">
-        <div className="carousel">
-          {["apple", "google", "amazon", "microsoft", "facebook", "netflix", "tesla", "nike", "adidas", "coca-cola"].map((company, idx) => (
-            <div className="item" key={company}>
-              <img
-                src={`https://logo.clearbit.com/${company}.com`}
-                alt={`${company.charAt(0).toUpperCase() + company.slice(1)} logo - Partner`}
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Animation Styles */}
-      <style jsx>{`
-        .animate-line-draw {
-          position: relative;
-          overflow: hidden;
-          white-space: nowrap;
-          display: inline-block;
-          animation: line-draw 2s forwards;
-        }
-
-        @keyframes line-draw {
-          from {
-            clip-path: inset(0 100% 0 0);
-          }
-          to {
-            clip-path: inset(0 0 0 0);
-          }
-        }
-
-        /* Fallback for browsers that don't support clip-path */
-        @supports not (clip-path: inset(0 0 0 0)) {
-          .animate-line-draw {
-            visibility: visible;
-          }
-        }
-      `}</style>
     </div>
   );
 };

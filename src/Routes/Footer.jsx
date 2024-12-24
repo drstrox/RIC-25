@@ -1,118 +1,116 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  FaFacebook, FaTwitter, FaLinkedin, FaInstagram, 
-  FaEnvelope, FaPhone, FaMapMarkerAlt 
-} from 'react-icons/fa';
+import React from 'react'; 
+import { FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const SOCIAL_LINKS = [
-  { href: 'https://facebook.com', icon: FaFacebook },
-  { href: 'https://twitter.com', icon: FaTwitter },
   { href: 'https://linkedin.com', icon: FaLinkedin },
   { href: 'https://instagram.com', icon: FaInstagram },
 ];
 
-const QUICK_LINKS = [
-  { name: 'Home', path: '/' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Team', path: '/team' },
-  { name: 'Calendar', path: '/calendar' },
-];
-
 const Footer = () => {
   return (
-    <footer className="bg-[#0a192f] text-white py-12 sm:py-16">
+    <footer className="bg-[#192230] text-white py-8 sm:py-10">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
-          <div className="md:col-span-1">
-            <h4 className="text-xl sm:text-2xl font-bold mb-4 gradient-text">
+          <div>
+            <h4 className="text-xl sm:text-2xl font-bold mb-3 text-blue-300">
               Research & Industrial Conclave
             </h4>
-            <p className="text-sm sm:text-base text-gray-400 mb-4">
+            <p className="text-sm sm:text-base text-gray-300 mb-4">
               Bridging academia and industry through innovative research and collaborative solutions at IIT Indore.
             </p>
-            
             {/* Social Media Links */}
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4">
               {SOCIAL_LINKS.map(({ href, icon: Icon }) => (
                 <a
                   key={href}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-300 transition-colors duration-300"
+                  className="text-gray-300 hover:text-blue-300 transition-transform transform hover:scale-110"
                 >
-                  <Icon size={40} className="sm:size-19" />
+                  <Icon size={30} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="md:col-span-1">
-            <h4 className="text-lg sm:text-xl font-semibold mb-4 gradient-text">Quick Links</h4>
-            <div className="space-y-2">
-              {QUICK_LINKS.map(({ name, path }) => (
-                <Link
-                  key={path}
-                  to={path}
-                  className="block text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  {name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Research Areas */}
-          <div className="md:col-span-1">
-            <h4 className="text-lg sm:text-xl font-semibold mb-4 gradient-text">Research Focus</h4>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-              <li>Robotics & AI</li>
-              <li>Sustainable Technologies</li>
-              <li>Industrial Automation</li>
-              <li>Machine Learning</li>
-              <li>Renewable Energy</li>
-            </ul>
-          </div>
-
           {/* Contact Information */}
-          <div className="md:col-span-1">
-            <h4 className="text-lg sm:text-xl font-semibold mb-4 gradient-text">Contact Us</h4>
+          <div>
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">Contact Us</h4>
             <div className="space-y-3 text-sm sm:text-base">
               <div className="flex items-center space-x-3">
                 <FaMapMarkerAlt className="text-blue-400 shrink-0" />
-                <span className="text-gray-400 truncate">
+                <span className="text-gray-300 truncate">
                   IIT Indore, Simrol, Madhya Pradesh 453552
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-blue-400 shrink-0" />
                 <a 
-                  href="mailto:ric@iitindore.ac.in" 
-                  className="text-gray-400 hover:text-white transition-colors truncate"
+                  href="mailto:acad.council@iiti.ac.in" 
+                  className="text-gray-300 hover:text-white transition-colors truncate"
                 >
-                  ric@iitindore.ac.in
+                  acad.council@iiti.ac.in
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhone className="text-blue-400 shrink-0" />
-                <span className="text-gray-400">+91 (731) 660-2000</span>
+                <span className="text-gray-300">+91 88853 33459</span>
+              </div>
+            </div>
+          </div>
+
+          {/* OC Contact Section */}
+          <div>
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 text-blue-300">Overall Co-ordinators (OC)</h4>
+            <div className="space-y-4 text-sm sm:text-base text-gray-300">
+              <div>
+                <h5 className="font-bold text-white">Keerthan Pragnay</h5>
+                <p className="text-gray-300">Position: OC-UG</p>
+                <div className="flex items-center space-x-3">
+                  <FaEnvelope className="text-blue-400 shrink-0" />
+                  <a 
+                    href="mailto:ocug@iitindore.ac.in" 
+                    className="text-gray-300 hover:text-white transition-colors truncate"
+                  >
+                    ce230004025@iiti.ac.in
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FaPhone className="text-blue-400 shrink-0" />
+                  <span className="text-gray-300">+91 88853 33459</span>
+                </div>
+              </div>
+              <div>
+                <h5 className="font-bold text-white">Mohit Tiwari</h5>
+                <p className="text-gray-300">Position: OC-PG</p>
+                <div className="flex items-center space-x-3">
+                  <FaEnvelope className="text-blue-400 shrink-0" />
+                  <a 
+                    href="mailto:ocpg@iitindore.ac.in" 
+                    className="text-gray-300 hover:text-white transition-colors truncate"
+                  >
+                    mt2302105020@iiti.ac.in
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FaPhone className="text-blue-400 shrink-0" />
+                  <span className="text-gray-300">+91 76949 54133</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Copyright and Additional Info */}
+        {/* Footer Bottom */}
         <div className="mt-8 pt-6 border-t border-gray-700 text-center">
-          <p className="text-xs sm:text-sm text-gray-400">
-            © 2024 Research and Industrial Conclave, IIT Indore. 
-            All Rights Reserved.
+          <p className="text-xs sm:text-sm text-gray-300">
+            © 2024 Research and Industrial Conclave, IIT Indore. All Rights Reserved.
           </p>
-          <div className="mt-2 space-x-4 text-xs sm:text-sm">
-            <a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white">Terms of Service</a>
+          <div className="mt-3 space-x-4 text-xs sm:text-sm">
+            <a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a>
+            <a href="#" className="text-gray-300 hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>
