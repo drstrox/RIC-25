@@ -7,12 +7,15 @@ import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
 import { Teams } from './Routes/Teams';
+import CountdownTimer from './Routes/CountdownTimer';
 
 function App() {
   return (
     <Router>
      
       <IconNameNavbar />
+      
+      <CountdownTimer targetDate={"2025-01-15T00:00:00"}/>
 
       {/* Main content and routes */}
       <Routes>
@@ -64,6 +67,7 @@ const HomePage = () => {
   }, []);
 
   return (
+    
     <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-hidden">
