@@ -44,7 +44,7 @@ const eventsData = [
   },
 ];
 
-export const Events = () => {
+const Events = () => {
   const [activeCard, setActiveCard] = useState(null);
 
   return (
@@ -78,3 +78,5 @@ export const Events = () => {
     </div>
   );
 };
+
+export {Events} ;

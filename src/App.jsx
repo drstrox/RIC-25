@@ -2,11 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { IconNameNavbar } from './Routes/Nav';
-import { ArrowRight } from 'react-feather'; 
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
-import { Teams } from './Routes/Teams';
+import CountdownTimer from './Routes/CountdownTimer';
+import {Events} from './Routes/Events';
+import Teams from './Routes/Teams';
+import Merch from './Routes/Merch' ;
+import Sponsers from './Routes/Sponsers' ;
 
 function App() {
   return (
@@ -25,7 +28,7 @@ function App() {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/merch" element={<MerchPage />} />
+        <Route path="/merch" element={<Merch />} />
         <Route path="/sponsers" element={<Sponsers />} />
       </Routes>
       </div>
@@ -177,7 +180,7 @@ const HomePage = () => {
 
 // Other pages (for routing purposes)
 const ProjectsPage = () => <div>Projects Page</div>;
-const TeamPage = () => <div>Team Page</div>;
+
 const SettingsPage = () => <div>Settings Page</div>;
 const CalendarPage = () => <div>Calendar Page</div>;
 
