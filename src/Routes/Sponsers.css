@@ -113,10 +113,22 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .grid-layout {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
-    grid-template-rows: auto; /* Adjust height */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px;
   }
-  .title-box {
-    grid-row: auto; /* Adjusts to content */
+
+  .sponsor-card {
+    width: 100%; /* Ensure full width of the container */
+    margin: 0 auto; /* Center the cards */
+  }
+
+  .title-box,
+  .platinum-box,
+  .silver-box,
+  .gold-box,
+  .bronze-box {
+    grid-column: auto; /* Ensure no conflicting grid placement */
+    grid-row: auto;
   }
 }
