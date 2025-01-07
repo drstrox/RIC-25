@@ -1,8 +1,12 @@
-# React + Vite
+# Research and Industrial Conclave 2025
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official Web page of RIC'25 of Indian Institute of Technology Indore, built on Vite and React with inclusion of Spline Components from the Spline Community.
 
-Currently, two official plugins are available:
+# To run the Project:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1) Clone the Repo using git clone https://github.com/drstrox/RIC-25
+2) Install the dependencies using npm install.
+3) Move to the Directory using cd RIC-25.
+4) Run the project using npm run dev.
+
+# Made by RIC Web Team 2025
