@@ -61,8 +61,8 @@ const KeyPositions = ({ year }) => {
       description: 'Oversee the postgraduate students and represent their academic interests in all forums.',
       image: '/team_members/mohit.jpg',
       socials: {
-        linkedin: 'https://www.linkedin.com/in/mohit-tiwari-oc-pg',
-        instagram: 'https://www.instagram.com/mohit_tiwari_oc_pg'
+        linkedin: 'https://www.linkedin.com/in/mohit-tiwari99?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        instagram: 'https://www.instagram.com/rolling_manu?igsh=MTB6amJ6ZGswem54Zw=='
       }
     },
     {
@@ -71,8 +71,8 @@ const KeyPositions = ({ year }) => {
       description: 'Leading the academic affairs for the students, ensuring a smooth academic journey.',
       image: '/team_members/Rithvik.jpg',
       socials: {
-        linkedin: 'https://www.linkedin.com/in/rithvik-gs-acads',
-        instagram: 'https://www.instagram.com/rithvik_gs_acads'
+        linkedin: 'https://www.linkedin.com/in/rithvik-balabhadra',
+        instagram: 'https://www.instagram.com/b._rithvik'
       }
     },
     {
@@ -81,8 +81,8 @@ const KeyPositions = ({ year }) => {
       description: 'Leading the academic affairs for the students, ensuring a smooth academic journey.',
       image: '/team_members/Adi_Raj.jpg',
       socials: {
-        linkedin: 'https://www.linkedin.com/in/rithvik-gs-acads',
-        instagram: 'https://www.instagram.com/rithvik_gs_acads'
+        linkedin: 'https://www.linkedin.com/in/adi-raj-410290292',
+        instagram: 'https://www.instagram.com/adisculptor?igsh=ZnZjbG9ydmF6dDNh&utm_source=qr'
       }
     }
   ];
@@ -306,8 +306,8 @@ const Teams = () => {
           imgSrc: '/team_members/Vansh Gupta.jpg',
           name: 'Vansh Gupta',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vansh-gupta',
-            instagram: 'https://www.instagram.com/vanshgupta',
+            linkedin: 'https://www.linkedin.com/in/vansh-gupta-37967531b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/urstrulyvansh?igsh=MWhubnRiZXY3Nzlicw==',
           }
         },
         {
@@ -395,16 +395,16 @@ const Teams = () => {
           imgSrc: '/team_members/Arnav Nitin Birari.jpg',
           name: 'Arnav Nitin Birari',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/arnav-birari',
-            instagram: 'https://www.instagram.com/arnav_birari',
+            linkedin: 'https://www.linkedin.com/in/arnav-birari-419153220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            instagram: 'https://www.instagram.com/birari.arnav/profilecard/?igsh=MXU2Mjl5dTUwbjg5Yw==',
           }
         },
         {
           imgSrc: '/team_members/Yadavalli Akshay Kumar.jpeg',
           name: 'Akshay',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/yadavalli-akshay-kumar',
-            instagram: 'https://www.instagram.com/akshay_yadavalli',
+            linkedin: '',
+            instagram: '',
           }
         }
       ]
@@ -416,16 +416,15 @@ const Teams = () => {
           imgSrc: '/team_members/Poorvansh Dashore.jpg',
           name: 'Poorvansh Dashore',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/poorvansh-dashore',
-            instagram: 'https://www.instagram.com/poorvansh_dashore',
+            instagram: 'https://www.instagram.com/poorvanshdashore/?utm_source=ig_web_button_share_sheet',
           }
         },
         {
           imgSrc: '/team_members/Nekkanti Vedh.jpeg',
           name: 'Vedh Nekkanti',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vedh-nekkanti',
-            instagram: 'https://www.instagram.com/vedh_nekkanti',
+            linkedin: 'https://www.linkedin.com/in/vedh-n-618458339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+            instagram: 'https://www.instagram.com/___vedh_/?utm_source=ig_web_button_share_sheet',
           }
         },
         {
@@ -440,7 +439,7 @@ const Teams = () => {
           imgSrc: '/team_members/Eshika Pawar.jpg',
           name: 'Eshika Pawar',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/eshika-pawar',
+            linkedin: 'https://www.linkedin.com/in/eshika-pawar-7756b5230',
             instagram: 'https://www.instagram.com/eshika_pawar',
           }
         }
@@ -451,14 +450,14 @@ const Teams = () => {
       headImg: '/team_members/Aditi.jpg',
       headName: 'ADITI LUNIYA',
       headSocials: {
-        linkedin: 'https://www.linkedin.com/in/aditi-luniya',
+        linkedin: 'https://www.linkedin.com/in/aditi-luniya-9960a5286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         instagram: 'https://www.instagram.com/aditi_luniya',
       },
       coHeadImg: '/team_members/Akash Kumar Singh.jpg',
       coHeadName: 'Akash Singh',
       coHeadSocials: {
-        linkedin: 'https://www.linkedin.com/in/akashsingh68/',
-        instagram: 'https://www.instagram.com/vanshika_gupta',
+        linkedin: '',
+        instagram: '',
 
       },
       members: [
@@ -482,8 +481,8 @@ const Teams = () => {
           imgSrc: '/team_members/Yash Brijesh Modi.jpeg',
           name: 'Yash Modi',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            linkedin: 'http://linkedin.com/in/yash-modi-6b8644332',
+            instagram: 'https://www.instagram.com/imyash_m17?igsh=cXFxZnd1bDU4Z3N3&utm_source=qr',
           }
         },
         {
@@ -498,16 +497,14 @@ const Teams = () => {
           imgSrc: '/team_members/Madasi Benin.jpeg',
           name: 'M Benin',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            instagram: 'https://www.instagram.com/_whos.benin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
           }
         },
         {
           imgSrc: '/team_members/Arnav Verma.jpg',
           name: 'Arnav Verma',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vanshika-gupta',
-            instagram: 'https://www.instagram.com/vanshika_gupta',
+            instagram: 'https://www.instagram.com/arnav__ve_r_ma/?utm_source=ig_web_button_share_sheet',
           }
         }
       ]
@@ -558,7 +555,7 @@ const Teams = () => {
           name: 'Rohith B',
           socials: {
             linkedin: 'https://www.linkedin.com/in/banoth-rohith-6b59322b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-            instagram: 'https://www.instagram.com/_rohith_017/profilecard/?igsh=ZDQ1MGRiY2lrbmly',
+            instagram: 'https://www.instagram.com/rxhith17/?utm_source=ig_web_button_share_sheet',
           }
         }
       ]
@@ -585,7 +582,7 @@ const Teams = () => {
         },
         {
           imgSrc: '/team_members/Manik_Bhowmik.jpeg',
-          name: 'MAnik Bhowmik',
+          name: 'Manik Bhowmik',
           socials: {
             linkedin: 'https://www.linkedin.com/in/vansh-gupta',
             instagram: 'https://www.instagram.com/vanshgupta',
@@ -603,8 +600,8 @@ const Teams = () => {
           imgSrc: '/team_members/Sri_Varsha.jpg',
           name: 'Sri Varsha D',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/jagruthi-bojja-315bb8334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            instagram: 'https://www.instagram.com/jagruthii__/profilecard/?igsh=OGxib3lvb3piaTN0',
+            linkedin: 'https://www.linkedin.com/in/sri-varsha-d-4b709a210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          instagram: 'https://www.instagram.com/_ahsrav._?igsh=Z2lxYWdhamRmNmIx',
           }
         },
       ]
@@ -614,39 +611,39 @@ const Teams = () => {
       headImg: '/team_members/Rao_Dheeraj.jpeg',
       headName: 'Rao Dheeraj',
       headSocials: {
-        linkedin: 'https://www.linkedin.com/in/praneeth-chitrapu',
-        instagram: 'https://www.instagram.com/praneethchitrapu',
+        linkedin: 'https://www.linkedin.com/in',
+        instagram: 'https://www.instagram.com/',
       },
       members: [
         {
           imgSrc: '/team_members/Pratik_Prajn.jpg',
           name: 'Pratik Prajn',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/vedh-nekkanti',
-            instagram: 'https://www.instagram.com/vedh_nekkanti',
+            linkedin: '',
+            instagram: '',
           }
         },
         {
           imgSrc: '/team_members/Mrunal.jpeg',
           name: 'Mrunal Nandpure',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/devanshi-kawlani-21967b330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            instagram: 'https://www.instagram.com/_.devanshii12/profilecard/?igsh=MXdzZnBpY3VodTAwbQ==',
+            linkedin: '',
+            instagram: '',
           }
         },
         {
           imgSrc: '/team_members/Gaurav_Rajput.jpg',
           name: 'Gaurav Rajput',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/eshika-pawar',
-            instagram: 'https://www.instagram.com/eshika_pawar',
+            linkedin: '',
+            instagram: '',
           }
         },
         {
           imgSrc: '/team_members/Kaushal_Raj.jpg',
           name: 'Kaushal Raj Soni',
           socials: {
-            linkedin: 'https://www.linkedin.com/in/eshika-pawar',
+            linkedin: '',
             instagram: 'https://www.instagram.com/eshika_pawar',
           }
         },
@@ -673,8 +670,8 @@ const Teams = () => {
       headImg: '/team_members/Rabadiya_Ridhamkumar.jpg',
       headName: 'Ridhamkumar Rabadiya',
       headSocials: {
-        linkedin: 'https://www.linkedin.com/in/rajeev-kadali-900287327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-        instagram: 'https://www.instagram.com/rajeev._.kadali/profilecard/?igsh=MWdyNGJtODkxOGk4bw==',
+        linkedin: '',
+        instagram: '',
       },
       members: [
         {
