@@ -57,6 +57,15 @@ const IconNameNavbar = () => {
 
   const handleBrochureClick = (url) => {
     window.open(url, '_blank');
+    if (isMobile) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleNavItemClick = () => {
+    if (isMobile) {
+      setIsMobileMenuOpen(false);
+    }
   };
 
   return (
@@ -139,6 +148,7 @@ const IconNameNavbar = () => {
               ) : (
                 <Link
                   to={path}
+                  onClick={handleNavItemClick}
                   className="relative group block md:inline-block my-4 md:my-0"
                   onMouseEnter={() => setIsHovered(key)}
                   onMouseLeave={() => setIsHovered(null)}
