@@ -87,31 +87,31 @@ const Card = ({ dataImage, header, content }) => {
 const Cards = () => {
   const cardData = [
     {
-      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
+      image: "https://th.bing.com/th/id/OIP.m2aDtE-s-hqIIE4y2L2riwAAAA?rs=1&pid=ImgDetMain",
       header: "Narendra Sarawgi",
       content:
-        "Discover the wonders of the Amazon Rainforest, home to diverse wildlife and vibrant greenery.",
+        "Founder, Managing Director, Innoversant Solutions Pvt Ltd",
     },
     {
-      image: "https://images.pexels.com/photos/87419/canyon-gorge-antelope-canyon-tourist-attraction-87419.jpeg",
+      image: "/speakers/pronobesh.jpg",
       header: "Dr. Pronobesh Chattopadhyay ",
       content:
         " PhD, Scientist F, Defence Research Laboratory, DRDO, Ministry of Defence, Tezpur – 784001 ",
     },
     {
-      image: "https://images.pexels.com/photos/2525899/pexels-photo-2525899.jpeg",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQFKo4PU4e0mkA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677787905638?e=1742428800&v=beta&t=9PNG2xfdHsZyFb5vsLctIa8pB-NuMswf9RsVnPHNnpM",
       header: "Col Pratyush Kumar Singh Gaur",
       content:
-        "Chief Executive Officer at Meer Group of Institutions Military Veteran | Ex Vice President Morgan Stanley Operations Management | LSSBB | LSSGB | CSM® ",
+        "Chief Executive Officer at Meer Group of Institutions Military Veteran | Ex Vice President Morgan Stanley Operations Management",
     },
     {
-      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
+      image: "https://www.theweek.in/content/dam/week/news/health/images/2021/9/9/rahul-pawar.jpg",
       header: "Rahul Shivaji Pawar",
       content:
         "Co-founder and CEO of Banva Technologies Service Pvt. Ltd. ",
     },
     {
-      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
+      image: "https://www.businessoutreach.in/wp-content/uploads/2023/06/Shivam-Ahuja.jpg",
       header: "Shivam Ahuja ",
       content:
         "Founder and CEO of SkillCircle, Founder Delhi Angels ",
@@ -123,7 +123,7 @@ const Cards = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#0a192f] via-[#112240] to-[#0a192f] py-10">
       <div className="cards - container mx-auto px-2">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
-          Speakers
+          Our Speakers
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {cardData.map((card, index) => (
@@ -137,7 +137,10 @@ const Cards = () => {
         </div>
       </div>
     </div>
+    
   );
 };
+
+
 
 export { Cards };
