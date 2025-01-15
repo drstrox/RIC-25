@@ -101,22 +101,25 @@ const SpeakerGrid = ({ speakers = [], title = "Speakers" }) => {
 const Cards = () => {
   const currentSpeakers = [
     {
-      image: "/api/placeholder/400/500",
+      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
       header: "Narendra Sarawgi",
-      content: "Technology Leader & Innovation Expert"
+      content:
+        "Discover the wonders of the Amazon Rainforest, home to diverse wildlife and vibrant greenery.",
     },
     {
-      image: "/api/placeholder/400/500",
-      header: "Dr. Pronobesh Chattopadhyay",
-      content: "PhD, Scientist F, Defence Research Laboratory, DRDO"
+      image: "https://images.pexels.com/photos/87419/canyon-gorge-antelope-canyon-tourist-attraction-87419.jpeg",
+      header: "Dr. Pronobesh Chattopadhyay ",
+      content:
+        " PhD, Scientist F, Defence Research Laboratory, DRDO, Ministry of Defence, Tezpur – 784001 ",
     },
     {
-      image: "/api/placeholder/400/500",
+      image: "https://images.pexels.com/photos/2525899/pexels-photo-2525899.jpeg",
       header: "Col Pratyush Kumar Singh Gaur",
-      content: "CEO at Meer Group of Institutions, Military Veteran"
+      content:
+        "Chief Executive Officer at Meer Group of Institutions Military Veteran | Ex Vice President Morgan Stanley Operations Management | LSSBB | LSSGB | CSM® ",
     },
     {
-      image: "/api/placeholder/400/500",
+      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
       header: "Rahul Shivaji Pawar",
       content: "Co-founder and CEO of Banva Technologies"
     },
@@ -134,35 +137,35 @@ const Cards = () => {
       content: "Technology Leader & Innovation Expert"
     },
     {
-      image: "/api/placeholder/400/500",
-      header: "Dr. Pronobesh Chattopadhyay",
-      content: "PhD, Scientist F, Defence Research Laboratory, DRDO"
-    },
-    {
-      image: "/api/placeholder/400/500",
-      header: "Col Pratyush Kumar Singh Gaur",
-      content: "CEO at Meer Group of Institutions, Military Veteran"
-    },
-    {
-      image: "/api/placeholder/400/500",
-      header: "Rahul Shivaji Pawar",
-      content: "Co-founder and CEO of Banva Technologies"
-    },
-    {
-      image: "/api/placeholder/400/500",
-      header: "Shivam Ahuja",
-      content: "Founder and CEO of SkillCircle, Founder Delhi Angels"
+      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
+      header: "Shivam Ahuja ",
+      content:
+        "Founder and CEO of SkillCircle, Founder Delhi Angels ",
     }
   ];
 
   return (
-    <div>
-      <SpeakerGrid speakers={currentSpeakers} title="Current Speakers" />
-      {pastSpeakers.length > 0 && (
-        <SpeakerGrid speakers={pastSpeakers} title="Past Speakers" />
-      )}
+    <div className="min-h-screen bg-gradient-to-b from-[#0a192f] via-[#112240] to-[#0a192f] py-10">
+      <div className="cards - container mx-auto px-2">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+          Speakers
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          {cardData.map((card, index) => (
+            <Card
+              key={index}
+              dataImage={card.image}
+              header={card.header}
+              content={card.content}
+            />
+          ))}
+        </div>
+      </div>
     </div>
+    
   );
 };
+
+
 
 export {Cards};
