@@ -17,7 +17,7 @@ function App() {
 
       <IconNameNavbar />
       
-      <CountdownTimer targetDate={"2025-01-15T00:00:00"}/>
+      
 
       <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       <Routes>
@@ -70,6 +70,7 @@ const HomePage = () => {
     
     <div className="bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-x-hidden">
       {/* Hero Section */}
+      
       <div className="relative bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-white min-h-screen overflow-hidden">
         {/* Full-Screen Spline Background */}
         <div className="absolute inset-0 z-0">
@@ -172,6 +173,9 @@ const HomePage = () => {
         {/* Mobile Background Overlay */}
         <div className="absolute inset-0 bg-black/40 md:hidden z-5"></div>
       </div>
+      
+            <Cards/>
+
     </div>
   );
 };

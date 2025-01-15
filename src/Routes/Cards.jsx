@@ -88,52 +88,54 @@ const Cards = () => {
   const cardData = [
     {
       image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
-      header: "Amazon Rainforest",
+      header: "Narendra Sarawgi",
       content:
         "Discover the wonders of the Amazon Rainforest, home to diverse wildlife and vibrant greenery.",
     },
     {
       image: "https://images.pexels.com/photos/87419/canyon-gorge-antelope-canyon-tourist-attraction-87419.jpeg",
-      header: "Grand Canyon",
+      header: "Dr. Pronobesh Chattopadhyay ",
       content:
-        "Experience the breathtaking views of the Grand Canyon, one of the Seven Natural Wonders of the World.",
+        " PhD, Scientist F, Defence Research Laboratory, DRDO, Ministry of Defence, Tezpur – 784001 ",
     },
     {
       image: "https://images.pexels.com/photos/2525899/pexels-photo-2525899.jpeg",
-      header: "Maldives",
+      header: "Col Pratyush Kumar Singh Gaur",
       content:
-        "Relax on the pristine beaches of the Maldives, renowned for their crystal-clear waters and luxurious resorts.",
+        "Chief Executive Officer at Meer Group of Institutions Military Veteran | Ex Vice President Morgan Stanley Operations Management | LSSBB | LSSGB | CSM® ",
     },
     {
       image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
-      header: "Amazon Rainforest",
+      header: "Rahul Shivaji Pawar",
       content:
-        "Discover the wonders of the Amazon Rainforest, home to diverse wildlife and vibrant greenery.",
+        "Co-founder and CEO of Banva Technologies Service Pvt. Ltd. ",
     },
     {
-      image: "https://images.pexels.com/photos/87419/canyon-gorge-antelope-canyon-tourist-attraction-87419.jpeg",
-      header: "Grand Canyon",
+      image: "https://images.pexels.com/photos/6942667/pexels-photo-6942667.jpeg",
+      header: "Shivam Ahuja ",
       content:
-        "Experience the breathtaking views of the Grand Canyon, one of the Seven Natural Wonders of the World.",
-    },
-    {
-      image: "https://images.pexels.com/photos/2525899/pexels-photo-2525899.jpeg",
-      header: "Maldives",
-      content:
-        "Relax on the pristine beaches of the Maldives, renowned for their crystal-clear waters and luxurious resorts.",
+        "Founder and CEO of SkillCircle, Founder Delhi Angels ",
     }
+    
   ];
 
   return (
-    <div className="cards-container">
-      {cardData.map((card, index) => (
-        <Card
-          key={index}
-          dataImage={card.image}
-          header={card.header}
-          content={card.content}
-        />
-      ))}
+    <div className="min-h-screen bg-gradient-to-b from-[#0a192f] via-[#112240] to-[#0a192f] py-10">
+      <div className="cards - container mx-auto px-2">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+          Speakers
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          {cardData.map((card, index) => (
+            <Card
+              key={index}
+              dataImage={card.image}
+              header={card.header}
+              content={card.content}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
