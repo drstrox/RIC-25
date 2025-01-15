@@ -5,7 +5,6 @@ import { IconNameNavbar } from './Routes/Nav';
 import { Footer } from './Routes/Footer';
 import { Cards } from './Routes/Cards';
 import { GalleryPage } from './Routes/Gallery';
-import CountdownTimer from './Routes/CountdownTimer';
 import {Events} from './Routes/Events';
 import Teams from './Routes/Teams';
 import Merch from './Routes/Merch' ;
