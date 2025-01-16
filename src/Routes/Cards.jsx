@@ -103,27 +103,27 @@ const SpeakerGrid = ({ speakers = [], title = "Speakers" }) => {
 const Cards = () => {
   const currentSpeakers = [
     {
-      image: "/api/placeholder/400/500",
+      image: "https://th.bing.com/th/id/OIP.m2aDtE-s-hqIIE4y2L2riwAAAA?rs=1&pid=ImgDetMain",
       header: "Narendra Sarawgi",
       content: "Technology Leader & Innovation Expert"
     },
     {
-      image: "/api/placeholder/400/500",
+      image: "/speakers/pronobesh.jpg",
       header: "Dr. Pronobesh Chattopadhyay",
       content: "PhD, Scientist F, Defence Research Laboratory, DRDO"
     },
     {
-      image: "/api/placeholder/400/500",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQFKo4PU4e0mkA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677787905638?e=1742428800&v=beta&t=9PNG2xfdHsZyFb5vsLctIa8pB-NuMswf9RsVnPHNnpM",
       header: "Col Pratyush Kumar Singh Gaur",
       content: "CEO at Meer Group of Institutions, Military Veteran"
     },
     {
-      image: "/api/placeholder/400/500",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQGboezFv6fq-A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1681050938039?e=1742428800&v=beta&t=GyGV3fyJoR1EA4Jr-6jhaXlRFtjohdbtE5pXvhnTftM",
       header: "Rahul Shivaji Pawar",
       content: "Co-founder and CEO of Banva Technologies"
     },
     {
-      image: "/api/placeholder/400/500",
+      image: "https://media.licdn.com/dms/image/v2/C5103AQGIY_zJMv5o2Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1517044712571?e=1742428800&v=beta&t=95jb9l-oVZFk1NJ9ENFM0HyLw-ZOZEsKlBwef6rlc9w",
       header: "Shivam Ahuja",
       content: "Founder and CEO of SkillCircle, Founder Delhi Angels"
     }
@@ -131,29 +131,29 @@ const Cards = () => {
 
   const pastSpeakers = [
     {
-      image: "/api/placeholder/400/500",
-      header: "Narendra Sarawgi",
-      content: "Technology Leader & Innovation Expert"
+      image: "https://th.bing.com/th/id/OIP.-s2E25mBHuW1AClLfVgzpQHaHa?rs=1&pid=ImgDetMain",
+      header: "Anita Gupta",
+      content: "Head of Innovation and Enterpreneurship, Department of SnT"
     },
     {
-      image: "/api/placeholder/400/500",
-      header: "Dr. Pronobesh Chattopadhyay",
-      content: "PhD, Scientist F, Defence Research Laboratory, DRDO"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQEyfNTpsY6CXQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516871993784?e=1742428800&v=beta&t=TpqO9FGndDw-Fo62EfPyKRX2pyJyXVbtAsPUzqZJE88",
+      header: "Dr. Philip Josh",
+      content: "Head of Product Development, Mahindra Last Mile Mobility Ltd."
     },
     {
-      image: "/api/placeholder/400/500",
-      header: "Col Pratyush Kumar Singh Gaur",
-      content: "CEO at Meer Group of Institutions, Military Veteran"
+      image: "https://th.bing.com/th/id/OIP.rVJbRkordzkVL9Qo8MOGmwAAAA?rs=1&pid=ImgDetMain",
+      header: "Dr R Umamaheswarar",
+      content: "Director, Human Space Flight Centre, Bangalore"
     },
     {
-      image: "/api/placeholder/400/500",
-      header: "Rahul Shivaji Pawar",
-      content: "Co-founder and CEO of Banva Technologies"
+      image: "https://rndesignleadersummit.com/vhost/rndesignleadersummit.com/images/speaker/133348410235265980.jpg",
+      header: "Mr. Sant Ranjan",
+      content: "Chairman, Smart India Hackathon"
     },
     {
-      image: "/api/placeholder/400/500",
-      header: "Shivam Ahuja",
-      content: "Founder and CEO of SkillCircle, Founder Delhi Angels"
+      image: "https://th.bing.com/th/id/OIP.NByFyfB1VQHtmMxCPIpzCQHaFj?w=230&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7",
+      header: "Mr. Gaurav Seth",
+      content: "CEO, Pier Sight Space"
     }
   ];
 
