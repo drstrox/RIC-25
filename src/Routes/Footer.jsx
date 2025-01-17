@@ -19,8 +19,9 @@ const Footer = () => {
             <p className="text-sm sm:text-base text-gray-300 mb-4">
               Bridging academia and industry through innovative research and collaborative solutions at IIT Indore.
             </p>
+            
             {/* Social Media Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-4">
               {SOCIAL_LINKS.map(({ href, icon: Icon }) => (
                 <a
                   key={href}
@@ -32,6 +33,18 @@ const Footer = () => {
                   <Icon size={30} />
                 </a>
               ))}
+            </div>
+
+            {/* Sponsor Section */}
+            <div className="text-left mt-6">
+              <p className="text-xl sm:text-2xl font-semibold text-blue-300 mb-2">
+                Sponsored by
+              </p>
+              <img 
+                src="/sandLogic.png" 
+                alt="Sandlogic Logo" 
+                className="w-32 sm:w-40"
+              />
             </div>
           </div>
 
