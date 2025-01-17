@@ -13,13 +13,13 @@ const IconNameNavbar = () => {
     { name: 'Events', path: '/events', key: 'events' },
     { name: 'Team', path: '/team', key: 'team' },
     { name: 'Gallery', path: '/gallery', key: 'gallery' },
-    { name: 'Sponsors', path: '/sponsers', key: 'sponsors'},
+    { name: 'Sponsors', path: '/sponsors', key: 'sponsors' },
     { name: 'Merch', path: '/merch', key: 'merch' },
-    { 
-      name: 'Brochure', 
-      path: 'https://drive.google.com/file/d/1p-mQA-5x3pxThtmdamCEymI8ixn04KeS/view?usp=sharing', 
-      key: 'calendar', 
-      isDownload: true 
+    {
+      name: 'Brochure',
+      path: 'https://drive.google.com/file/d/1p-mQA-5x3pxThtmdamCEymI8ixn04KeS/view?usp=sharing',
+      key: 'calendar',
+      isDownload: true,
     },
   ];
 
@@ -71,8 +71,15 @@ const IconNameNavbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-opacity-30 backdrop-blur-md bg-[#0a192f] shadow-lg">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo and Title */}
         <div className="flex items-center">
+          {/* Logo */}
+          <img
+            src="/ric.jpg" 
+            alt="Logo"
+            className="w-9 h-9 mr-2"
+          />
+          {/* Title */}
           <span className="text-xl md:text-2xl font-bold text-white tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             RIC
           </span>
@@ -115,27 +122,27 @@ const IconNameNavbar = () => {
         {/* Navigation Links - Responsive */}
         <div
           className={`
-            ${isMobile 
+            ${isMobile
               ? `absolute top-full left-0 right-0 
                  bg-[#0a192f] p-4
-                 ${isMobileMenuOpen ? 'block' : 'hidden'}` 
+                 ${isMobileMenuOpen ? 'block' : 'hidden'}`
               : 'md:flex md:space-x-8 md:items-center'}
             transition-all duration-300 ease-in-out
           `}
         >
           {NavItems.map(({ name, path, key, isDownload }, index) => (
-            <div 
+            <div
               key={key}
               className={`
                 transform transition-all duration-500 ease-out
-                ${isMobile && menuItemsVisible 
-                  ? 'opacity-100 translate-y-0' 
+                ${isMobile && menuItemsVisible
+                  ? 'opacity-100 translate-y-0'
                   : 'opacity-100 translate-y-0'}
               `}
               style={{
-                transitionDelay: isMobile && menuItemsVisible 
-                  ? `${index * 100}ms` 
-                  : '0ms'
+                transitionDelay: isMobile && menuItemsVisible
+                  ? `${index * 100}ms`
+                  : '0ms',
               }}
             >
               {isDownload ? (
