@@ -81,7 +81,7 @@ const IconNameNavbar = () => {
           />
           {/* Title */}
           <span className="text-xl md:text-2xl font-bold text-white tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            RIC
+            Sandlogic RIC
           </span>
         </div>
 
