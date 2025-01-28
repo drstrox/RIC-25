@@ -38,13 +38,15 @@ const Footer = () => {
             {/* Sponsor Section */}
             <div className="text-left mt-6">
               <p className="text-xl sm:text-2xl font-semibold text-blue-300 mb-2">
-                Sponsored by
+                Partnered with
               </p>
-              <img 
-                src="/sandLogic.png" 
-                alt="Sandlogic Logo" 
-                className="w-32 sm:w-40"
-              />
+              <a href="https://www.sandlogic.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/sandlogic.png"
+                  alt="Sandlogic Logo"
+                  className="w-27 h-20 mr-2"
+                />
+        </a>
             </div>
           </div>
 
