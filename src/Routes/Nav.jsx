@@ -73,15 +73,17 @@ const IconNameNavbar = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo and Title */}
         <div className="flex items-center">
-          {/* Logo */}
+        <a href="https://www.sandlogic.com/" target="_blank" rel="noopener noreferrer">
           <img
-            src="/ric.jpg" 
-            alt="Logo"
-            className="w-9 h-9 mr-2"
+            src="/sandlogic-ric.png"
+            alt="Sandlogic Logo"
+            className="w-25 h-20 mr-3"
           />
+        </a>
+
           {/* Title */}
           <span className="text-xl md:text-2xl font-bold text-white tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            Sandlogic RIC
+            Sandlogic AI - RIC
           </span>
         </div>
 
